@@ -1,146 +1,114 @@
 ---
 title: "Executive Guide to AI Governance (SME Edition)"
-date: "2025-09-09"
-excerpt: "A simple three-tier approach to AI governance that SMEs can implement without dedicated compliance teams."
+date: "2025-10-06"
+excerpt: "Good governance for an SME is short, clear, and designed to enable AI, not stop it. This guide shows you the minimum viable AI governance setup."
 author: "Patrick D."
 categories: ["AI Governance", "Risk Management"]
 tags: ["Governance", "Policy", "Risk", "Compliance"]
-featuredImage: "/images/blog/governance.jpg"
 ---
 
-Most Australian SMEs sit in one of two camps: no AI policy at all (so people are nervous or go rogue), or an overcooked policy copied from an enterprise template (so no one uses AI). Good governance for SMEs looks different.
+## Why this matters
 
+Most Australian SMEs sit in one of two camps: no AI policy at all (so people are nervous or go rogue), or an overcooked policy copied from an enterprise template (so no one uses AI). Good governance for an SME is short, clear, and designed to enable AI, not stop it.
 
-## The SME Governance Challenge
+This guide shows you the minimum viable AI governance setup.
 
-Large enterprises have dedicated teams for AI governance. SMEs don't. You need governance that:
+## 1. Start with a one-page policy
 
-- Fits on a page
-- Can be understood without training
-- Enables responsible use (not just restricts)
-- Can be maintained without a full-time role
+Your AI policy should answer five things in plain English:
 
+- **Purpose** — why you're using AI (productivity, quality, speed).
+- **Approved tools** — which AI tools are OK right now.
+- **Data rules** — what staff can/can't paste into AI tools.
+- **Human-in-the-loop** — what must be checked by a person.
+- **Incidents** — what to do if something goes wrong.
 
-## The Three-Tier Approach
+That's it. One page. Make it easy to read on mobile.
 
-I recommend a simple three-tier system for classifying AI use:
+## 2. Use red / amber / green data rules
 
+This is the simplest way to reduce risk without killing adoption.
 
-### Green: Go Ahead
+**Red (never in public AI):** customer PII, salary/payroll, secrets, legal disputes, anything contractually sensitive.
 
-Low-risk uses that are pre-approved:
+**Amber (only in approved tools):** internal docs, SOPs, proposals, financial summaries, product info.
 
-- Using AI for brainstorming and ideation
-- Drafting internal communications
-- Summarising public documents
-- General research and learning
+**Green (OK):** public info, marketing copy, generic content.
 
-**Key rule:** Don't input confidential or personal data.
+Put examples under each colour using your language so staff recognise the data.
 
+## 3. Require human review for "material" outputs
 
-### Amber: Proceed with Caution
+AI is great at first drafts, not final judgment. Tell people:
 
-Medium-risk uses that need care:
+- Customer-facing comms? Check.
+- Board/exec papers? Check.
+- Anything with numbers or obligations? Check.
 
-- Drafting external communications (human review required)
-- Analysing business data (anonymised)
-- Creating content for publication (disclosure required)
-- Using AI with client-related information
+Give them a 5-point QA checklist:
+1. Is it factually correct?
+2. Does it reference the right product/policy?
+3. Is the tone right for our brand?
+4. Are links/attachments correct?
+5. Is the right person copied/assigned?
 
-**Key rule:** Human review before any external use.
+If it fails, fix or re-generate.
 
+## 4. Keep a light audit trail
 
-### Red: Stop and Ask
+You don't need a SIEM and a GRC team. You do need to know what was generated, by whom, and for what.
 
-High-risk uses that need approval:
+Pick one of these:
+- Ask teams to work in approved tools that already log history.
+- Or add a simple "AI used" tickbox in your ticketing/CRM/SharePoint workflow.
+- Or keep a shared "AI outputs" folder with date + owner.
 
-- Any use involving personal data
-- Legal, financial, or compliance documents
-- Decision-making with significant impact
-- New AI tools not yet approved
+That way, if there's a complaint or mistake, you can find it.
 
-**Key rule:** Get explicit approval first.
+## 5. Check your vendors
 
+Before rolling out a new AI tool, ask 5 questions:
+1. Where is data stored?
+2. Do you train your models on our data? Can we turn that off?
+3. Do you support SSO / company logins?
+4. Can admins see usage?
+5. How do you handle takedown/correction?
 
-## Your One-Page AI Policy
+If they can't answer quickly, don't use it across the business.
 
-A practical AI policy for SMEs covers:
+## 6. Set a review cadence
 
+AI changes monthly. Your policy should too.
 
-### 1. Approved Tools
+- Nominate an AI steward (could be ops, IT, or whoever's leading AI).
+- Review the policy every quarter.
+- Add/remove approved tools.
+- Share 2–3 "good examples" of AI use from teams.
 
-List the specific AI tools employees can use. For example:
+This normalises AI and keeps people inside the guardrails.
 
-- ChatGPT (free version for Green uses only)
-- Microsoft Copilot (for licensed users)
-- [Your industry-specific tools]
+## 7. Where this gets you
 
+With this SME-level governance:
+- staff know what's allowed
+- managers have something to point to
+- you can move faster on strategy and training
+- you reduce the "can I paste this?" noise
 
-### 2. Data Rules
+Now you can actually start rolling out AI-enabled workflows.
 
-Be explicit about what data can and cannot be entered:
+If you'd like to learn more or chat about AI Governance, reach out to us on our [Contact page](/contact).
 
-- **Never:** Customer personal information, financial details, passwords
-- **With care:** Business data (anonymised), internal processes
-- **Okay:** Public information, general questions, hypothetical scenarios
-
-
-### 3. Review Requirements
-
-Specify when human review is required:
-
-- Always before external communication
-- Always for published content
-- Always for decisions with financial or legal impact
-
-
-### 4. Disclosure
-
-When do you need to disclose AI use?
-
-- **Internal team:** Not required for Green uses
-- **Clients:** Required if AI significantly contributed to deliverables
-- **Public:** Required for published content
-
-
-### 5. Escalation
-
-Make it clear who to ask when uncertain:
-
-- Line manager for role-specific questions
-- [Designated person] for policy questions
-- Leadership for new tool requests
-
-
-## Common Questions
-
-
-### "Do we need to tell clients we use AI?"
-
-Depends on the context. For routine efficiency (like drafting), generally no. For substantive work product, transparency builds trust.
-
-
-### "What about employees using AI without telling us?"
-
-This is already happening. Good governance acknowledges reality and provides safe channels rather than pretending prohibition works.
-
-
-### "How often should we update our policy?"
-
-Review quarterly. AI moves fast, and your policy should evolve.
-
-
-## Getting Started
-
-1. **Audit current use:** Find out what AI tools people are already using
-2. **Classify your data:** What's sensitive, what's not
-3. **Draft your policy:** Use the three-tier approach
-4. **Communicate clearly:** Make sure everyone knows the rules
-5. **Review regularly:** Build in quarterly check-ins
+Cheers,
+Patrick
 
 ---
 
-*Want help developing AI governance for your organisation? [See our services](/services) or [contact us](/contact) to discuss your needs.*
+## Relevant Insights
+
+- [AI Strategy Essentials for SMEs](/ai-strategy-essentials-for-smes) — Develop a clear, actionable AI strategy tailored to your business goals
+- [Building AI Skills Across Teams](/building-ai-skills-across-teams) — Your roadmap for building internal AI capability
+- [10 Quick Wins with GenAI](/10-quick-wins-genai-services-finance-ops) — Practical use cases you can implement this week
 
 ---
 

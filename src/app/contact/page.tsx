@@ -68,54 +68,106 @@ export default function ContactPage() {
               {/* Honeypot field for spam protection */}
               <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
 
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-[var(--color-text-primary)] mb-2"
-                >
-                  Name <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  className="w-full px-4 py-3 border border-[var(--color-border)] rounded-lg focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent transition-colors"
-                  placeholder="Your name"
-                />
+              {/* Name and Email row */}
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-[var(--color-text-primary)] mb-2"
+                  >
+                    Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    className="w-full px-4 py-3 border border-[var(--color-border)] rounded-lg focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent transition-colors"
+                    placeholder="Your name"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-[var(--color-text-primary)] mb-2"
+                  >
+                    Email <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="w-full px-4 py-3 border border-[var(--color-border)] rounded-lg focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent transition-colors"
+                    placeholder="you@company.com"
+                  />
+                </div>
               </div>
 
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-[var(--color-text-primary)] mb-2"
-                >
-                  Email <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  className="w-full px-4 py-3 border border-[var(--color-border)] rounded-lg focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent transition-colors"
-                  placeholder="you@company.com"
-                />
+              {/* Phone and Company row */}
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-[var(--color-text-primary)] mb-2"
+                  >
+                    Phone
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    className="w-full px-4 py-3 border border-[var(--color-border)] rounded-lg focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent transition-colors"
+                    placeholder="04XX XXX XXX"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="company"
+                    className="block text-sm font-medium text-[var(--color-text-primary)] mb-2"
+                  >
+                    Company <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    required
+                    className="w-full px-4 py-3 border border-[var(--color-border)] rounded-lg focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent transition-colors"
+                    placeholder="Your company name"
+                  />
+                </div>
               </div>
 
+              {/* Industry dropdown */}
               <div>
                 <label
-                  htmlFor="phone"
+                  htmlFor="industry"
                   className="block text-sm font-medium text-[var(--color-text-primary)] mb-2"
                 >
-                  Phone
+                  Industry
                 </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  className="w-full px-4 py-3 border border-[var(--color-border)] rounded-lg focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent transition-colors"
-                  placeholder="Your phone number"
-                />
+                <select
+                  id="industry"
+                  name="industry"
+                  className="w-full px-4 py-3 border border-[var(--color-border)] rounded-lg focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent transition-colors bg-white"
+                >
+                  <option value="">Select your industry</option>
+                  <option value="Professional Services">Professional Services</option>
+                  <option value="Retail & E-commerce">Retail & E-commerce</option>
+                  <option value="Manufacturing">Manufacturing</option>
+                  <option value="Healthcare">Healthcare</option>
+                  <option value="Construction & Trades">Construction & Trades</option>
+                  <option value="Hospitality & Tourism">Hospitality & Tourism</option>
+                  <option value="Financial Services">Financial Services</option>
+                  <option value="Education & Training">Education & Training</option>
+                  <option value="Agriculture">Agriculture</option>
+                  <option value="Transport & Logistics">Transport & Logistics</option>
+                  <option value="Technology">Technology</option>
+                  <option value="Other">Other</option>
+                </select>
               </div>
 
               <div>

@@ -12,13 +12,13 @@ export const metadata: Metadata = {
 
 // Section navigation data
 const sections = [
-  { id: 'why-urgent', title: 'Why Now', icon: '⚡' },
-  { id: 'principles', title: 'Principles', icon: '🎯' },
-  { id: 'playbook', title: '4-Phase Playbook', icon: '📋' },
-  { id: 'content-map', title: 'Content Map', icon: '🗂️' },
-  { id: 'trust', title: 'Trust & Shadow AI', icon: '🛡️' },
-  { id: 'ownership', title: 'Ownership', icon: '👥' },
-  { id: 'next-steps', title: 'Next Steps', icon: '🚀' },
+  { id: 'why-urgent', title: 'Why Upskilling is Urgent', icon: '⚡' },
+  { id: 'principles', title: 'Principles for AI Upskilling', icon: '🎯' },
+  { id: 'playbook', title: '4-Phase Playbook for Adoption', icon: '📋' },
+  { id: 'content-map', title: 'Content Map for Implementation', icon: '🗂️' },
+  { id: 'trust', title: 'Addressing Trust & Shadow AI', icon: '🛡️' },
+  { id: 'ownership', title: 'Who Should Own Upskilling', icon: '👥' },
+  { id: 'next-steps', title: 'Your Next Steps', icon: '🚀' },
 ];
 
 // Stats for callout boxes
@@ -193,7 +193,7 @@ export default function UpskillingPlaybookPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-b from-[var(--color-bg-secondary)] to-white py-16 md:py-24">
+      <section className="bg-gradient-to-b from-[var(--color-bg-secondary)] to-white py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <span className="inline-block text-sm font-medium text-[var(--color-primary)] bg-blue-50 px-3 py-1 rounded-full mb-4">
@@ -205,9 +205,12 @@ export default function UpskillingPlaybookPage() {
               light enough to run alongside business-as-usual, structured enough to create consistent, safe AI use.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="#playbook" size="lg">
+              <Link
+                href="#playbook"
+                className="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-dark)] transition-colors"
+              >
                 Jump to the Playbook
-              </Button>
+              </Link>
               <Button href="/contact" variant="outline" size="lg">
                 Get Help Implementing
               </Button>
@@ -217,23 +220,26 @@ export default function UpskillingPlaybookPage() {
       </section>
 
       {/* Navigation Cards */}
-      <Section background="white">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-center mb-8">What&apos;s in this playbook</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3">
+      <section className="bg-white py-12">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-center mb-2">What&apos;s in this playbook</h2>
+          <p className="text-center text-[var(--color-text-secondary)] mb-8">
+            The AI Guides&apos; tried and tested approach to upskilling for AI in SMEs
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {sections.map((section) => (
               <Link
                 key={section.id}
                 href={`#${section.id}`}
-                className="flex flex-col items-center p-4 rounded-xl bg-[var(--color-bg-secondary)] hover:bg-[var(--color-primary)] hover:text-white transition-all duration-200 group text-center"
+                className="flex flex-col items-center p-5 rounded-xl bg-[var(--color-bg-secondary)] hover:bg-[var(--color-primary)] hover:text-white transition-all duration-200 group text-center"
               >
-                <span className="text-2xl mb-2">{section.icon}</span>
-                <span className="text-sm font-medium">{section.title}</span>
+                <span className="text-3xl mb-3">{section.icon}</span>
+                <span className="text-sm font-semibold leading-tight">{section.title}</span>
               </Link>
             ))}
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* Key Stats */}
       <Section background="light">
@@ -488,6 +494,24 @@ export default function UpskillingPlaybookPage() {
         </div>
       </Section>
 
+      {/* About */}
+      <Section background="white">
+        <div className="max-w-3xl mx-auto">
+          <Card hover={false} className="bg-[var(--color-bg-secondary)]">
+            <h3 className="font-semibold text-[var(--color-text-primary)] mb-3">About the Author</h3>
+            <p className="text-[var(--color-text-secondary)] text-sm mb-4">
+              Patrick is co-founder of The AI Guides, bringing a decade of strategy consulting experience to help Australian SMEs adopt AI with confidence. Based in Sydney, he specialises in practical AI strategy, executive training, and building team capability.
+            </p>
+            <div className="pt-4 border-t border-[var(--color-border)]">
+              <h4 className="font-semibold text-[var(--color-text-primary)] mb-2 text-sm">About The AI Guides</h4>
+              <p className="text-[var(--color-text-secondary)] text-sm">
+                The AI Guides helps Australian SMEs navigate AI adoption with confidence. We provide expert AI strategy, executive and team training, and implementation support tailored to your business needs.
+              </p>
+            </div>
+          </Card>
+        </div>
+      </Section>
+
       {/* CTA Band */}
       <section className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-dark)] py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
@@ -502,7 +526,7 @@ export default function UpskillingPlaybookPage() {
       </section>
 
       {/* Related Resources */}
-      <Section background="white">
+      <Section background="light">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-center mb-8">Related resources</h2>
           <div className="grid md:grid-cols-3 gap-6">
@@ -519,24 +543,6 @@ export default function UpskillingPlaybookPage() {
               <CardDescription className="text-sm">Why 59% of Australian workers are stuck waiting for training</CardDescription>
             </Card>
           </div>
-        </div>
-      </Section>
-
-      {/* About */}
-      <Section background="light">
-        <div className="max-w-3xl mx-auto">
-          <Card hover={false} className="bg-white">
-            <h3 className="font-semibold text-[var(--color-text-primary)] mb-3">About the Author</h3>
-            <p className="text-[var(--color-text-secondary)] text-sm mb-4">
-              Patrick is co-founder of The AI Guides, bringing a decade of strategy consulting experience to help Australian SMEs adopt AI with confidence. Based in Sydney, he specialises in practical AI strategy, executive training, and building team capability.
-            </p>
-            <div className="pt-4 border-t border-[var(--color-border)]">
-              <h4 className="font-semibold text-[var(--color-text-primary)] mb-2 text-sm">About The AI Guides</h4>
-              <p className="text-[var(--color-text-secondary)] text-sm">
-                The AI Guides helps Australian SMEs navigate AI adoption with confidence. We provide expert AI strategy, executive and team training, and implementation support tailored to your business needs.
-              </p>
-            </div>
-          </Card>
         </div>
       </Section>
     </>

@@ -1,0 +1,178 @@
+{
+  "site": {
+    "name": "The AI Guides",
+    "tagline": "Empowering Australian SMEs with trusted AI strategy, training, and resources",
+    "domain": "theaiguides.co",
+    "contact_email": "contact@theaiguides.co",
+    "location": "Sydney, Australia"
+  },
+  "pages": [
+    {
+      "title": "Home",
+      "path": "/",
+      "wordpress_path": "/",
+      "status": "migrated"
+    },
+    {
+      "title": "Services",
+      "path": "/services",
+      "wordpress_path": "/services/",
+      "status": "migrated"
+    },
+    {
+      "title": "Executive Training",
+      "path": "/executive-training",
+      "wordpress_path": "/executive-training/",
+      "status": "migrated"
+    },
+    {
+      "title": "AI Readiness Survey",
+      "path": "/ai-readiness-survey",
+      "wordpress_path": "/ai-readiness-survey/",
+      "status": "migrated",
+      "notes": "Survey embed placeholder - needs external tool integration"
+    },
+    {
+      "title": "AI Guides & Insights (Resources)",
+      "path": "/resources",
+      "wordpress_path": "/resources/",
+      "status": "migrated"
+    },
+    {
+      "title": "About",
+      "path": "/about",
+      "wordpress_path": "/about/",
+      "status": "migrated"
+    },
+    {
+      "title": "Contact",
+      "path": "/contact",
+      "wordpress_path": "/contact/",
+      "status": "migrated",
+      "notes": "Contact form needs endpoint configuration"
+    }
+  ],
+  "blog_posts": [
+    {
+      "title": "Four Microsoft Copilot Features Australian SMEs Should Actually Be Using",
+      "slug": "microsoft-copilot-features",
+      "date": "2025-11-08",
+      "wordpress_url": "/microsoft-copilot-features/",
+      "new_url": "/microsoft-copilot-features",
+      "author": "Patrick D.",
+      "categories": ["AI Tools", "Productivity"],
+      "status": "migrated"
+    },
+    {
+      "title": "News in AI (for Australian SMEs)",
+      "slug": "news-in-ai-oct2025",
+      "date": "2025-11-08",
+      "wordpress_url": "/news-in-ai-oct2025/",
+      "new_url": "/news-in-ai-oct2025",
+      "author": "Patrick D.",
+      "categories": ["AI News", "Industry Updates"],
+      "status": "migrated"
+    },
+    {
+      "title": "The AI Skills Gap Is Real—And It's Getting Worse in Australian Workplaces",
+      "slug": "ai-skills-gap-australia-2025",
+      "date": "2025-11-06",
+      "wordpress_url": "/ai-skills-gap-australia-2025/",
+      "new_url": "/ai-skills-gap-australia-2025",
+      "author": "Patrick D.",
+      "categories": ["AI Strategy", "Workforce"],
+      "status": "migrated"
+    },
+    {
+      "title": "10 Quick Wins with GenAI in Services, Finance and Ops",
+      "slug": "10-quick-wins-genai-services-finance-ops",
+      "date": "2025-11-04",
+      "wordpress_url": "/10-quick-wins-genai-services-finance-ops/",
+      "new_url": "/10-quick-wins-genai-services-finance-ops",
+      "author": "Patrick D.",
+      "categories": ["AI Implementation", "Use Cases"],
+      "status": "migrated"
+    },
+    {
+      "title": "Building AI Skills Across Teams",
+      "slug": "building-ai-skills-across-teams",
+      "date": "2025-11-04",
+      "wordpress_url": "/building-ai-skills-across-teams/",
+      "new_url": "/building-ai-skills-across-teams",
+      "author": "Patrick D.",
+      "categories": ["AI Training", "Workforce Development"],
+      "status": "migrated"
+    },
+    {
+      "title": "AI Strategy Essentials for SMEs",
+      "slug": "ai-strategy-essentials-for-smes",
+      "date": "2025-11-04",
+      "wordpress_url": "/ai-strategy-essentials-for-smes/",
+      "new_url": "/ai-strategy-essentials-for-smes",
+      "author": "Patrick D.",
+      "categories": ["AI Strategy", "Business Planning"],
+      "status": "migrated"
+    },
+    {
+      "title": "Executive Guide to AI Governance (SME Edition)",
+      "slug": "executive-guide-to-ai-governance-sme-edition",
+      "date": "2025-11-04",
+      "wordpress_url": "/executive-guide-to-ai-governance-sme-edition/",
+      "new_url": "/executive-guide-to-ai-governance-sme-edition",
+      "author": "Patrick D.",
+      "categories": ["AI Governance", "Risk Management"],
+      "status": "migrated"
+    },
+    {
+      "title": "SME AI Upskilling Playbook (2025)",
+      "slug": "sme-ai-upskilling-playbook-2025",
+      "date": "2025-11-04",
+      "wordpress_url": "/sme-ai-upskilling-playbook-2025/",
+      "new_url": "/sme-ai-upskilling-playbook-2025",
+      "author": "Patrick D.",
+      "categories": ["AI Training", "Workforce Development"],
+      "status": "migrated"
+    }
+  ],
+  "redirects": [
+    { "from": "/home/", "to": "/", "type": 301 },
+    { "from": "/posts/", "to": "/resources/", "type": 301 },
+    { "from": "/blog/", "to": "/resources/", "type": 301 },
+    { "from": "/category/*", "to": "/resources/", "type": 301 },
+    { "from": "/tag/*", "to": "/resources/", "type": 301 },
+    { "from": "/author/*", "to": "/about/", "type": 301 }
+  ],
+  "media": {
+    "logo": {
+      "wordpress_url": "https://theaiguides.co/wp-content/uploads/2025/11/the-ai-guides-logo-transparent-e1762259254685.webp",
+      "status": "placeholder_created",
+      "notes": "Using text/SVG logo component - download original for production"
+    },
+    "hero_image": {
+      "wordpress_url": "https://theaiguides.co/wp-content/uploads/2025/11/2205342232.jpg",
+      "status": "pending",
+      "notes": "Download and optimize for production"
+    },
+    "training_image": {
+      "wordpress_url": "https://theaiguides.co/wp-content/uploads/2025/11/2220841315-2-1024x683.jpg",
+      "status": "pending",
+      "notes": "Download and optimize for production"
+    },
+    "founder_photos": {
+      "wordpress_url": "https://theaiguides.co/wp-content/uploads/2025/11/1140498657-1.jpg",
+      "status": "placeholder_created",
+      "notes": "Using initials avatar - download actual photos for production"
+    }
+  },
+  "migration_status": {
+    "content_extracted": true,
+    "pages_created": true,
+    "blog_posts_created": true,
+    "seo_configured": true,
+    "redirects_configured": true,
+    "images_pending": true,
+    "forms_pending": true,
+    "survey_pending": true,
+    "analytics_pending": true
+  }
+}

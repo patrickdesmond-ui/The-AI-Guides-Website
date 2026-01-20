@@ -54,59 +54,9 @@
   ],
   "blog_posts": [
     {
-      "title": "Four Microsoft Copilot Features Australian SMEs Should Actually Be Using",
-      "slug": "microsoft-copilot-features",
-      "date": "2025-11-08",
-      "wordpress_url": "/microsoft-copilot-features/",
-      "new_url": "/microsoft-copilot-features",
-      "author": "Patrick D.",
-      "categories": ["AI Tools", "Productivity"],
-      "status": "migrated"
-    },
-    {
-      "title": "News in AI (for Australian SMEs)",
-      "slug": "news-in-ai-oct2025",
-      "date": "2025-11-08",
-      "wordpress_url": "/news-in-ai-oct2025/",
-      "new_url": "/news-in-ai-oct2025",
-      "author": "Patrick D.",
-      "categories": ["AI News", "Industry Updates"],
-      "status": "migrated"
-    },
-    {
-      "title": "The AI Skills Gap Is Real—And It's Getting Worse in Australian Workplaces",
-      "slug": "ai-skills-gap-australia-2025",
-      "date": "2025-11-06",
-      "wordpress_url": "/ai-skills-gap-australia-2025/",
-      "new_url": "/ai-skills-gap-australia-2025",
-      "author": "Patrick D.",
-      "categories": ["AI Strategy", "Workforce"],
-      "status": "migrated"
-    },
-    {
-      "title": "10 Quick Wins with GenAI in Services, Finance and Ops",
-      "slug": "10-quick-wins-genai-services-finance-ops",
-      "date": "2025-11-04",
-      "wordpress_url": "/10-quick-wins-genai-services-finance-ops/",
-      "new_url": "/10-quick-wins-genai-services-finance-ops",
-      "author": "Patrick D.",
-      "categories": ["AI Implementation", "Use Cases"],
-      "status": "migrated"
-    },
-    {
-      "title": "Building AI Skills Across Teams",
-      "slug": "building-ai-skills-across-teams",
-      "date": "2025-11-04",
-      "wordpress_url": "/building-ai-skills-across-teams/",
-      "new_url": "/building-ai-skills-across-teams",
-      "author": "Patrick D.",
-      "categories": ["AI Training", "Workforce Development"],
-      "status": "migrated"
-    },
-    {
       "title": "AI Strategy Essentials for SMEs",
       "slug": "ai-strategy-essentials-for-smes",
-      "date": "2025-11-04",
+      "date": "2025-09-02",
       "wordpress_url": "/ai-strategy-essentials-for-smes/",
       "new_url": "/ai-strategy-essentials-for-smes",
       "author": "Patrick D.",
@@ -116,7 +66,7 @@
     {
       "title": "Executive Guide to AI Governance (SME Edition)",
       "slug": "executive-guide-to-ai-governance-sme-edition",
-      "date": "2025-11-04",
+      "date": "2025-09-09",
       "wordpress_url": "/executive-guide-to-ai-governance-sme-edition/",
       "new_url": "/executive-guide-to-ai-governance-sme-edition",
       "author": "Patrick D.",
@@ -124,13 +74,63 @@
       "status": "migrated"
     },
     {
+      "title": "Building AI Skills Across Teams",
+      "slug": "building-ai-skills-across-teams",
+      "date": "2025-09-16",
+      "wordpress_url": "/building-ai-skills-across-teams/",
+      "new_url": "/building-ai-skills-across-teams",
+      "author": "Patrick D.",
+      "categories": ["AI Training", "Workforce Development"],
+      "status": "migrated"
+    },
+    {
       "title": "SME AI Upskilling Playbook (2025)",
       "slug": "sme-ai-upskilling-playbook-2025",
-      "date": "2025-11-04",
+      "date": "2025-09-23",
       "wordpress_url": "/sme-ai-upskilling-playbook-2025/",
       "new_url": "/sme-ai-upskilling-playbook-2025",
       "author": "Patrick D.",
       "categories": ["AI Training", "Workforce Development"],
+      "status": "migrated"
+    },
+    {
+      "title": "The AI Skills Gap Is Real—And It's Getting Worse in Australian Workplaces",
+      "slug": "ai-skills-gap-australia-2025",
+      "date": "2025-09-30",
+      "wordpress_url": "/ai-skills-gap-australia-2025/",
+      "new_url": "/ai-skills-gap-australia-2025",
+      "author": "Patrick D.",
+      "categories": ["AI Strategy", "Workforce"],
+      "status": "migrated"
+    },
+    {
+      "title": "10 Quick Wins with GenAI in Services, Finance and Ops",
+      "slug": "10-quick-wins-genai-services-finance-ops",
+      "date": "2025-10-07",
+      "wordpress_url": "/10-quick-wins-genai-services-finance-ops/",
+      "new_url": "/10-quick-wins-genai-services-finance-ops",
+      "author": "Patrick D.",
+      "categories": ["AI Implementation", "Use Cases"],
+      "status": "migrated"
+    },
+    {
+      "title": "Four Microsoft Copilot Features Australian SMEs Should Actually Be Using",
+      "slug": "microsoft-copilot-features",
+      "date": "2025-10-14",
+      "wordpress_url": "/microsoft-copilot-features/",
+      "new_url": "/microsoft-copilot-features",
+      "author": "Patrick D.",
+      "categories": ["AI Tools", "Productivity"],
+      "status": "migrated"
+    },
+    {
+      "title": "News in AI (for Australian SMEs)",
+      "slug": "news-in-ai-oct2025",
+      "date": "2025-10-21",
+      "wordpress_url": "/news-in-ai-oct2025/",
+      "new_url": "/news-in-ai-oct2025",
+      "author": "Patrick D.",
+      "categories": ["AI News", "Industry Updates"],
       "status": "migrated"
     }
   ],

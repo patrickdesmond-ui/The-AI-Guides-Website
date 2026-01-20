@@ -60,9 +60,9 @@ export default function ContactPage() {
 
       {/* Contact Form Section */}
       <Section background="white">
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-5 gap-12">
           {/* Contact Form */}
-          <div>
+          <div className="lg:col-span-3">
             <h2 className="mb-6">Send Us a Message</h2>
             <form className="space-y-6" action="https://formspree.io/f/xkooqgnj" method="POST">
               {/* Honeypot field for spam protection */}
@@ -141,35 +141,6 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Industry dropdown */}
-              <div>
-                <label
-                  htmlFor="industry"
-                  className="block text-sm font-medium text-[var(--color-text-primary)] mb-2"
-                >
-                  Industry
-                </label>
-                <select
-                  id="industry"
-                  name="industry"
-                  className="w-full px-4 py-3 border border-[var(--color-border)] rounded-lg focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent transition-colors bg-white"
-                >
-                  <option value="">Select your industry</option>
-                  <option value="Professional Services">Professional Services</option>
-                  <option value="Retail & E-commerce">Retail & E-commerce</option>
-                  <option value="Manufacturing">Manufacturing</option>
-                  <option value="Healthcare">Healthcare</option>
-                  <option value="Construction & Trades">Construction & Trades</option>
-                  <option value="Hospitality & Tourism">Hospitality & Tourism</option>
-                  <option value="Financial Services">Financial Services</option>
-                  <option value="Education & Training">Education & Training</option>
-                  <option value="Agriculture">Agriculture</option>
-                  <option value="Transport & Logistics">Transport & Logistics</option>
-                  <option value="Technology">Technology</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-
               <div>
                 <label
                   htmlFor="message"
@@ -194,7 +165,7 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="lg:col-span-2">
             <h2 className="mb-6">Get in Touch</h2>
             <div className="space-y-6">
               <Card hover={false} className="bg-[var(--color-bg-secondary)]">

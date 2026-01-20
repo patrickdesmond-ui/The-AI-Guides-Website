@@ -685,65 +685,71 @@ function DataCaptureScreen({ onSubmit }: { onSubmit: (data: RespondentData) => v
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-lg p-8 max-w-lg mx-auto">
+      <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-lg p-8 max-w-3xl mx-auto">
         <div className="space-y-5">
-          {/* Name */}
-          <div>
-            <label className="block text-sm font-medium text-[var(--color-text-primary)] mb-1">
-              Name <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="text"
-              value={formData.name}
-              onChange={(e) => handleChange('name', e.target.value)}
-              className={`w-full px-4 py-3 rounded-lg border ${errors.name ? 'border-red-500' : 'border-gray-200'} focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 outline-none transition-all`}
-              placeholder="Your full name"
-            />
-            {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+          {/* Name and Email row */}
+          <div className="grid sm:grid-cols-2 gap-4">
+            {/* Name */}
+            <div>
+              <label className="block text-sm font-medium text-[var(--color-text-primary)] mb-1">
+                Name <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                value={formData.name}
+                onChange={(e) => handleChange('name', e.target.value)}
+                className={`w-full px-4 py-3 rounded-lg border ${errors.name ? 'border-red-500' : 'border-gray-200'} focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 outline-none transition-all`}
+                placeholder="Your full name"
+              />
+              {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+            </div>
+
+            {/* Email */}
+            <div>
+              <label className="block text-sm font-medium text-[var(--color-text-primary)] mb-1">
+                Email <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="email"
+                value={formData.email}
+                onChange={(e) => handleChange('email', e.target.value)}
+                className={`w-full px-4 py-3 rounded-lg border ${errors.email ? 'border-red-500' : 'border-gray-200'} focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 outline-none transition-all`}
+                placeholder="your@email.com"
+              />
+              {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+            </div>
           </div>
 
-          {/* Email */}
-          <div>
-            <label className="block text-sm font-medium text-[var(--color-text-primary)] mb-1">
-              Email <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="email"
-              value={formData.email}
-              onChange={(e) => handleChange('email', e.target.value)}
-              className={`w-full px-4 py-3 rounded-lg border ${errors.email ? 'border-red-500' : 'border-gray-200'} focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 outline-none transition-all`}
-              placeholder="your@email.com"
-            />
-            {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
-          </div>
+          {/* Phone and Company row */}
+          <div className="grid sm:grid-cols-2 gap-4">
+            {/* Phone */}
+            <div>
+              <label className="block text-sm font-medium text-[var(--color-text-primary)] mb-1">
+                Phone <span className="text-[var(--color-text-muted)]">(Optional)</span>
+              </label>
+              <input
+                type="tel"
+                value={formData.phone}
+                onChange={(e) => handleChange('phone', e.target.value)}
+                className={`w-full px-4 py-3 rounded-lg border ${errors.phone ? 'border-red-500' : 'border-gray-200'} focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 outline-none transition-all`}
+                placeholder="04XX XXX XXX"
+              />
+              {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
+            </div>
 
-          {/* Phone */}
-          <div>
-            <label className="block text-sm font-medium text-[var(--color-text-primary)] mb-1">
-              Phone <span className="text-[var(--color-text-muted)]">(Optional)</span>
-            </label>
-            <input
-              type="tel"
-              value={formData.phone}
-              onChange={(e) => handleChange('phone', e.target.value)}
-              className={`w-full px-4 py-3 rounded-lg border ${errors.phone ? 'border-red-500' : 'border-gray-200'} focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 outline-none transition-all`}
-              placeholder="04XX XXX XXX"
-            />
-            {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
-          </div>
-
-          {/* Company */}
-          <div>
-            <label className="block text-sm font-medium text-[var(--color-text-primary)] mb-1">
-              Company
-            </label>
-            <input
-              type="text"
-              value={formData.company}
-              onChange={(e) => handleChange('company', e.target.value)}
-              className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 outline-none transition-all"
-              placeholder="Your company name"
-            />
+            {/* Company */}
+            <div>
+              <label className="block text-sm font-medium text-[var(--color-text-primary)] mb-1">
+                Company
+              </label>
+              <input
+                type="text"
+                value={formData.company}
+                onChange={(e) => handleChange('company', e.target.value)}
+                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 outline-none transition-all"
+                placeholder="Your company name"
+              />
+            </div>
           </div>
 
           {/* Industry */}
@@ -817,7 +823,7 @@ function QuestionCard({
 }) {
   return (
     <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-      <div className="bg-[var(--color-primary)] p-6">
+      <div className="bg-slate-800 p-6">
         <div className="text-sm text-white/70 mb-2">Question {questionNumber}</div>
         <h3 className="text-xl font-semibold text-white">{question.question}</h3>
       </div>
@@ -831,25 +837,25 @@ function QuestionCard({
               onClick={() => onSelectAnswer(idx)}
               className={`w-full text-left p-4 rounded-xl border-2 transition-all ${
                 selectedAnswer === idx
-                  ? 'border-[var(--color-primary)] bg-blue-50'
-                  : 'border-gray-200 hover:border-blue-300 hover:bg-gray-50'
+                  ? 'border-[var(--color-primary)] bg-[var(--color-primary)] text-white'
+                  : 'border-gray-200 hover:border-[var(--color-primary)] hover:bg-gray-50'
               }`}
             >
               <div className="flex items-start gap-3">
                 <div
                   className={`w-6 h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 mt-0.5 transition-all ${
                     selectedAnswer === idx
-                      ? 'border-[var(--color-primary)] bg-[var(--color-primary)]'
+                      ? 'border-white bg-white'
                       : 'border-gray-300'
                   }`}
                 >
                   {selectedAnswer === idx && (
-                    <div className="w-2 h-2 bg-white rounded-full" />
+                    <div className="w-2 h-2 bg-[var(--color-primary)] rounded-full" />
                   )}
                 </div>
                 <div>
-                  <div className="font-medium text-[var(--color-text-primary)]">{option.label}</div>
-                  <div className="text-sm text-[var(--color-text-muted)] mt-1">{option.description}</div>
+                  <div className={`font-medium ${selectedAnswer === idx ? 'text-white' : 'text-[var(--color-text-primary)]'}`}>{option.label}</div>
+                  <div className={`text-sm mt-1 ${selectedAnswer === idx ? 'text-white/80' : 'text-[var(--color-text-muted)]'}`}>{option.description}</div>
                 </div>
               </div>
             </button>

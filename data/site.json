@@ -1,0 +1,34 @@
+{
+  "siteName": "The AI Guides",
+  "tagline": "Empowering Australian SMEs with trusted AI strategy, training, and resources",
+  "logo": "https://theaiguides.co/wp-content/uploads/2025/11/the-ai-guides-logo-transparent-e1762259254685.webp",
+  "contactEmail": "contact@theaiguides.co",
+  "nav": [
+    { "label": "Home", "href": "/" },
+    { "label": "Services", "href": "/services" },
+    { "label": "Executive Training", "href": "/executive-training" },
+    { "label": "AI Readiness Survey", "href": "/ai-readiness-survey" },
+    { "label": "AI Guides & Insights", "href": "/resources" },
+    { "label": "About", "href": "/about" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "footer": {
+    "tagline": "The AI Guides empowers Australian SMEs with trusted AI strategy, training, and resources. We help leaders understand AI, prioritise actions, upskill teams, and implement solutions with confidence.",
+    "links": [
+      { "label": "Home", "href": "/" },
+      { "label": "Services", "href": "/services" },
+      { "label": "Executive Training", "href": "/executive-training" },
+      { "label": "AI Readiness Survey", "href": "/ai-readiness-survey" },
+      { "label": "AI Guides & Insights", "href": "/resources" },
+      { "label": "About", "href": "/about" },
+      { "label": "Contact", "href": "/contact" }
+    ]
+  },
+  "ctaButtons": [
+    "Explore Our Services",
+    "Book a Session",
+    "Talk to an AI Guide",
+    "Take the AI Readiness Survey",
+    "Contact Our Team"
+  ]
+}

@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-white text-slate-900 antialiased;
+}
+
+.section {
+  @apply py-16 sm:py-20 lg:py-24;
+}
+
+.container-pad {
+  @apply mx-auto w-full max-w-6xl px-6;
+}
+
+.prose-links a {
+  @apply text-brand-600 underline decoration-brand-200 underline-offset-4 transition hover:text-brand-700;
+}

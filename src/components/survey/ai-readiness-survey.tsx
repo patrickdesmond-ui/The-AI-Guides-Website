@@ -500,7 +500,7 @@ const industryRecommendations: Record<Industry, { title: string; recommendations
 };
 
 // Formspree endpoint - User should replace with their own
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xykknyqq';
 
 // Helper functions
 function getCategoryScores(answers: (number | null)[]): Record<Category, number> {

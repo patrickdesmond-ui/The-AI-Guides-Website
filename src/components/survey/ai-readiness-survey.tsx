@@ -608,7 +608,6 @@ function DataCaptureScreen({ onSubmit }: { onSubmit: (data: RespondentData) => v
     industry: '',
   });
   const [errors, setErrors] = useState<Partial<RespondentData>>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validatePhone = (phone: string): boolean => {
     if (!phone) return true; // Optional field
@@ -646,30 +645,25 @@ function DataCaptureScreen({ onSubmit }: { onSubmit: (data: RespondentData) => v
       return;
     }
 
-    setIsSubmitting(true);
-
-    // Submit to Formspree
+    // Submit lead to Formspree immediately (captures abandoned surveys)
     try {
-      const response = await fetch(FORMSPREE_ENDPOINT, {
+      fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          ...formData,
-          _subject: 'New AI Readiness Survey Submission',
+          _subject: `AI Readiness Survey - New Lead: ${formData.name}`,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || 'Not provided',
+          company: formData.company || 'Not provided',
+          industry: formData.industry || 'Not provided',
+          status: 'Started Survey',
         }),
       });
-
-      // Continue regardless of submission status - we don't want to block the survey
-      if (!response.ok) {
-        console.warn('Form submission failed, continuing with survey');
-      }
     } catch {
-      console.warn('Form submission error, continuing with survey');
+      // Continue even if submission fails
     }
 
-    setIsSubmitting(false);
     onSubmit(formData);
   };
 
@@ -774,8 +768,8 @@ function DataCaptureScreen({ onSubmit }: { onSubmit: (data: RespondentData) => v
           <p className="text-xs text-[var(--color-text-muted)] mb-4">
             By continuing, you agree to receive your personalised results and occasional insights from The AI Guides. You can unsubscribe at any time.
           </p>
-          <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
-            {isSubmitting ? 'Starting...' : 'Continue to Survey →'}
+          <Button type="submit" size="lg" className="w-full">
+            Continue to Survey →
           </Button>
         </div>
       </form>
@@ -887,6 +881,10 @@ function ResultsScreen({
   onRestart: () => void;
 }) {
   const resultsRef = useRef<HTMLDivElement>(null);
+  const [emailSent, setEmailSent] = useState(false);
+  const [emailSending, setEmailSending] = useState(false);
+  const [resultsSubmitted, setResultsSubmitted] = useState(false);
+
   const categoryScores = getCategoryScores(answers);
   const totalScore = Object.values(categoryScores).reduce((a, b) => a + b, 0);
   const maturity = getMaturityLevel(totalScore);
@@ -905,6 +903,93 @@ function ResultsScreen({
   // Get industry recommendations
   const industry = (respondentData.industry as Industry) || 'Other';
   const industryRecs = industryRecommendations[industry];
+
+  // Build answers summary for Formspree
+  const getAnswersSummary = () => {
+    return questions.map((q, idx) => {
+      const answerIdx = answers[idx];
+      const selectedOption = answerIdx !== null ? q.options[answerIdx] : null;
+      return {
+        question: q.question,
+        category: q.category,
+        answer: selectedOption?.label || 'Not answered',
+        score: selectedOption?.score || 0,
+      };
+    });
+  };
+
+  // Submit full results to Formspree when results load
+  useEffect(() => {
+    if (resultsSubmitted) return;
+
+    const submitResults = async () => {
+      const answersSummary = getAnswersSummary();
+
+      try {
+        await fetch(FORMSPREE_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            _subject: `AI Readiness Survey: ${respondentData.name} (${maturity.level} - ${totalScore}/80)`,
+            name: respondentData.name,
+            email: respondentData.email,
+            phone: respondentData.phone || 'Not provided',
+            company: respondentData.company || 'Not provided',
+            industry: respondentData.industry || 'Not provided',
+            totalScore: `${totalScore}/80`,
+            maturityLevel: maturity.level,
+            strategyScore: `${categoryScores.Strategy}/16`,
+            peopleScore: `${categoryScores.People}/16`,
+            processScore: `${categoryScores.Process}/16`,
+            dataScore: `${categoryScores.Data}/16`,
+            governanceScore: `${categoryScores.Governance}/16`,
+            answers: answersSummary.map(a => `${a.category} - ${a.question}: ${a.answer} (${a.score}/4)`).join('\n'),
+          }),
+        });
+      } catch {
+        console.warn('Failed to submit results to Formspree');
+      }
+      setResultsSubmitted(true);
+    };
+
+    submitResults();
+  }, [resultsSubmitted]);
+
+  // Email results to user
+  const emailResults = async () => {
+    setEmailSending(true);
+    const answersSummary = getAnswersSummary();
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          _subject: `Your AI Readiness Results - ${maturity.level} (${totalScore}/80)`,
+          _replyto: respondentData.email,
+          email: respondentData.email,
+          _template: 'box',
+          messageType: 'Results Email Request',
+          name: respondentData.name,
+          company: respondentData.company || 'Not provided',
+          industry: respondentData.industry || 'Not provided',
+          totalScore: `${totalScore}/80`,
+          maturityLevel: maturity.level,
+          maturityDescription: maturityDescriptions[maturity.level],
+          categoryScores: `Strategy: ${categoryScores.Strategy}/16, People: ${categoryScores.People}/16, Process: ${categoryScores.Process}/16, Data: ${categoryScores.Data}/16, Governance: ${categoryScores.Governance}/16`,
+          topRecommendations: recommendations.slice(0, 3).map((r, i) => `${i + 1}. ${r.title}: ${r.description}`).join('\n\n'),
+          answers: answersSummary.map(a => `${a.category} - ${a.question}: ${a.answer} (${a.score}/4)`).join('\n'),
+        }),
+      });
+
+      if (response.ok) {
+        setEmailSent(true);
+      }
+    } catch {
+      console.warn('Failed to email results');
+    }
+    setEmailSending(false);
+  };
 
   // Chart data
   const chartData = {
@@ -960,6 +1045,8 @@ function ResultsScreen({
       day: 'numeric',
     });
 
+    const answersSummary = getAnswersSummary();
+
     const htmlContent = `
 <!DOCTYPE html>
 <html>
@@ -969,6 +1056,10 @@ function ResultsScreen({
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1e293b; line-height: 1.6; padding: 40px; max-width: 800px; margin: 0 auto; }
+    .print-bar { background: #1e293b; color: white; padding: 15px 20px; margin: -40px -40px 30px -40px; display: flex; justify-content: space-between; align-items: center; }
+    .print-bar h3 { font-size: 16px; }
+    .print-btn { background: #2563eb; color: white; border: none; padding: 10px 24px; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 14px; }
+    .print-btn:hover { background: #1d4ed8; }
     .header { border-bottom: 3px solid #2563eb; padding-bottom: 20px; margin-bottom: 30px; }
     .header h1 { color: #2563eb; font-size: 28px; margin-bottom: 5px; }
     .header p { color: #64748b; }
@@ -992,14 +1083,29 @@ function ResultsScreen({
     .recommendation p { font-size: 14px; color: #475569; }
     .industry-rec { padding: 10px 0; border-bottom: 1px solid #f1f5f9; }
     .industry-rec:last-child { border-bottom: none; }
+    .answer-item { padding: 10px 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; }
+    .answer-item:last-child { border-bottom: none; }
+    .answer-question { flex: 1; font-size: 13px; }
+    .answer-response { font-weight: 500; font-size: 13px; color: #2563eb; min-width: 120px; text-align: right; }
+    .category-header { background: #1e293b; color: white; padding: 8px 12px; border-radius: 6px; margin: 20px 0 10px 0; font-weight: 600; font-size: 14px; }
     .cta-box { background: linear-gradient(135deg, #2563eb, #06b6d4); color: white; padding: 30px; border-radius: 12px; text-align: center; margin-top: 40px; }
     .cta-box h3 { font-size: 20px; margin-bottom: 10px; }
     .cta-box p { opacity: 0.9; margin-bottom: 15px; }
     .cta-box a { color: white; font-weight: 600; }
-    @media print { body { padding: 20px; } .cta-box { break-inside: avoid; } }
+    @media print {
+      body { padding: 20px; }
+      .print-bar { display: none; }
+      .cta-box { break-inside: avoid; }
+      .section { break-inside: avoid; }
+    }
   </style>
 </head>
 <body>
+  <div class="print-bar">
+    <h3>AI Readiness Assessment Report</h3>
+    <button class="print-btn" onclick="window.print()">Save as PDF / Print</button>
+  </div>
+
   <div class="header">
     <h1>AI Readiness Assessment Report</h1>
     <p>Generated for ${respondentData.name} on ${currentDate}</p>
@@ -1059,6 +1165,19 @@ function ResultsScreen({
     `).join('')}
   </div>
   ` : ''}
+
+  <div class="section">
+    <h2>Your Responses</h2>
+    ${(['Strategy', 'People', 'Process', 'Data', 'Governance'] as Category[]).map(cat => `
+      <div class="category-header">${cat}</div>
+      ${answersSummary.filter(a => a.category === cat).map(a => `
+        <div class="answer-item">
+          <div class="answer-question">${a.question}</div>
+          <div class="answer-response">${a.answer} (${a.score}/4)</div>
+        </div>
+      `).join('')}
+    `).join('')}
+  </div>
 
   <div class="cta-box">
     <h3>Ready to Accelerate Your AI Journey?</h3>
@@ -1216,10 +1335,18 @@ function ResultsScreen({
         </div>
       )}
 
-      {/* Download Button */}
-      <div className="flex justify-center">
+      {/* Action Buttons */}
+      <div className="flex flex-wrap justify-center gap-4">
         <Button onClick={generatePDF} variant="outline" size="lg">
           📄 Download Results (PDF)
+        </Button>
+        <Button
+          onClick={emailResults}
+          variant="outline"
+          size="lg"
+          disabled={emailSent || emailSending}
+        >
+          {emailSent ? '✓ Results Emailed!' : emailSending ? 'Sending...' : '📧 Email Results to Me'}
         </Button>
       </div>
 

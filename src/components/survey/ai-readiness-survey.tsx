@@ -645,7 +645,25 @@ function DataCaptureScreen({ onSubmit }: { onSubmit: (data: RespondentData) => v
       return;
     }
 
-    // Don't submit to Formspree yet - we'll submit with full results at the end
+    // Submit lead to Formspree immediately (captures abandoned surveys)
+    try {
+      fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          _subject: `AI Readiness Survey - New Lead: ${formData.name}`,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || 'Not provided',
+          company: formData.company || 'Not provided',
+          industry: formData.industry || 'Not provided',
+          status: 'Started Survey',
+        }),
+      });
+    } catch {
+      // Continue even if submission fails
+    }
+
     onSubmit(formData);
   };
 

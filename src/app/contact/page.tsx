@@ -64,7 +64,7 @@ export default function ContactPage() {
           {/* Contact Form */}
           <div>
             <h2 className="mb-6">Send Us a Message</h2>
-            <form className="space-y-6" action="#" method="POST">
+            <form className="space-y-6" action="https://formspree.io/f/xkooqgnj" method="POST">
               {/* Honeypot field for spam protection */}
               <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
 

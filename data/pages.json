@@ -1,0 +1,382 @@
+{
+  "home": {
+    "hero": {
+      "headline": "Navigate AI Change with Confidence",
+      "subheading": "Expert guidance, strategy, and training to help your organisation adopt AI with confidence and drive measurable results.",
+      "primaryCta": { "label": "Explore Our Services", "href": "/services" },
+      "secondaryCta": { "label": "Executive AI Training", "href": "/executive-training" },
+      "image": "https://theaiguides.co/wp-content/uploads/2025/11/2205342232.jpg"
+    },
+    "whatWeDo": {
+      "heading": "Empowering Your Business with Practical AI Solutions",
+      "intro": "Artificial intelligence is transforming the business landscape at an unprecedented pace. For Australian SMEs, keeping up can be challenging, with uncertainty around where to start and how to ensure responsible, effective adoption. The AI Guides specialises in equipping Australian SMEs with the strategies, knowledge, and support needed to navigate AI adoption confidently. Explore our core services designed to help your business unlock the value of artificial intelligence, from planning and upskilling to seamless implementation.",
+      "services": [
+        {
+          "title": "AI Strategy & Roadmaps",
+          "description": "Develop a clear, actionable AI strategy tailored to your business goals. We guide you in prioritising opportunities, ensuring governance, and creating a roadmap for sustainable AI growth.",
+          "cta": "Discover Our Services →"
+        },
+        {
+          "title": "Executive & Team Training",
+          "description": "Upskill your leadership and teams with practical, real-world AI training. Our programs are designed to foster understanding, build confidence, and drive effective AI adoption across your organisation.",
+          "cta": "Explore Training Options →"
+        },
+        {
+          "title": "Implementation Support",
+          "description": "Receive end-to-end support for AI solution deployment. We help you manage change, integrate new technologies, and ensure your AI investments deliver measurable value.",
+          "cta": "Contact Our Experts →"
+        }
+      ]
+    },
+    "process": {
+      "heading": "Our Proven AI Adoption Process",
+      "steps": [
+        {
+          "title": "Assess Readiness",
+          "description": "We evaluate your current state, digital capabilities, and AI opportunities to identify where you stand and what is possible."
+        },
+        {
+          "title": "Prioritise Initiatives",
+          "description": "Together, we identify and sequence high-impact AI projects aligned to your strategic goals and available resources."
+        },
+        {
+          "title": "Implement Solutions",
+          "description": "Our team guides you through selecting, piloting, and integrating AI solutions that drive real business outcomes."
+        },
+        {
+          "title": "Upskill Teams",
+          "description": "We deliver targeted training and executive education to build AI literacy and empower confident adoption across your organisation."
+        },
+        {
+          "title": "Govern Responsibly",
+          "description": "We help you establish robust governance frameworks, ensuring your AI initiatives are ethical, secure, and compliant."
+        }
+      ]
+    },
+    "why": {
+      "heading": "Why The AI Guides?",
+      "content": "At The AI Guides, our name reflects our dual commitment: providing both practical AI resources and dedicated advisory support for Australian SMEs. Founded by two Sydney based strategy and digital transformation professionals, we serve as your trusted guides, offering clear, actionable frameworks and step-by-step guides to help you confidently navigate the evolving AI landscape.\n\nWhether you are seeking expert advice on AI strategy, hands-on training for your leadership team, or reliable resources to support digital transformation, The AI Guides delivers proven solutions tailored to your business needs. We empower leaders to make informed decisions and drive meaningful progress with AI."
+    },
+    "featuredGuides": {
+      "heading": "Expert resources for practical AI adoption in your business",
+      "subheading": "Explore our most valuable guides and insights, designed to help Australian SMEs navigate AI strategy, governance, and upskilling. Each resource delivers clear, practical advice to drive confident decision-making and sustainable transformation.",
+      "posts": [
+        {
+          "title": "Executive Guide to AI Governance (SME Edition)",
+          "description": "A comprehensive guide tailored for SME leaders to establish effective AI governance frameworks and manage risk.",
+          "href": "/executive-guide-to-ai-governance-sme-edition"
+        },
+        {
+          "title": "10 Quick Wins with GenAI in Services, Finance and Ops",
+          "description": "Discover ten actionable GenAI use cases that deliver immediate value across core business functions.",
+          "href": "/10-quick-wins-genai-services-finance-ops"
+        },
+        {
+          "title": "SME AI Upskilling Playbook (2025)",
+          "description": "Your roadmap for building internal AI capability—covering skills, training pathways, and upskilling best practices.",
+          "href": "/sme-ai-upskilling-playbook-2025"
+        }
+      ]
+    },
+    "ctaBand": {
+      "heading": "Discover Your AI Potential",
+      "subheading": "Take the First Step Towards Smarter Business",
+      "cta": { "label": "Take the AI Readiness Survey", "href": "/ai-readiness-survey" }
+    }
+  },
+  "services": {
+    "title": "Services - AI Advisory for Australian SMEs",
+    "hero": {
+      "text": "Our services are built for Australian SMEs that want AI to show up in day-to-day operations — not just in a presentation. We start with strategy, enable your people through executive and team training, and support you to implement AI safely with clear governance.",
+      "primaryCta": { "label": "Book a Session", "href": "/contact" },
+      "secondaryCta": { "label": "About The AI Guides", "href": "/about" }
+    },
+    "services": [
+      {
+        "title": "AI Strategy & Roadmaps",
+        "challenge": "Unclear where to begin with AI or which projects matter most.",
+        "what": "Assess your business, identify high-impact AI opportunities, and prioritise with a clear, actionable roadmap.",
+        "outcomes": "Clarity on AI direction, confident decision-making, and strategic advantage."
+      },
+      {
+        "title": "Executive & Team Training",
+        "challenge": "Skills gaps and uncertainty about AI tools or risks.",
+        "what": "Deliver practical, hands-on workshops tailored for leaders and staff, demystifying AI and building capability.",
+        "outcomes": "Upskilled teams, empowered leadership, and readiness for AI adoption."
+      },
+      {
+        "title": "Implementation Support",
+        "challenge": "Uncertainty in selecting, integrating, or scaling AI solutions.",
+        "what": "Act as your independent partner — guiding technology selection, managing vendors, and supporting rollout.",
+        "outcomes": "Reduced risk, successful deployments, and measurable business value."
+      },
+      {
+        "title": "AI Governance, Risk & Policy",
+        "challenge": "Navigating ethical, regulatory, and operational risks with AI.",
+        "what": "Develop governance frameworks, policies, and risk controls tailored to your business.",
+        "outcomes": "Responsible AI use, regulatory compliance, and trust with stakeholders."
+      }
+    ],
+    "packages": [
+      {
+        "title": "AI Foundations Workshop",
+        "price": "from $19,500",
+        "timeline": "2-3 days",
+        "includes": [
+          "Half-day facilitated session with your leadership team",
+          "AI landscape overview & priority discussion",
+          "One-page AI policy with red/amber/green data rules",
+          "Approved tools list & next steps",
+          "Follow-up session to lock it in"
+        ],
+        "whatYouGet": "Leadership aligned on your top 2-3 priorities, a policy people can actually understand, and clarity on what happens next.",
+        "bestFor": "SMEs who need executive buy-in before committing further."
+      },
+      {
+        "title": "AI Strategy Sprint",
+        "price": "from $39,500",
+        "timeline": "2 weeks",
+        "includes": [
+          "Executive alignment session",
+          "Stakeholder interviews (3-5 people)",
+          "Use-case workshop to prioritise what matters",
+          "90-day roadmap with sequenced initiatives",
+          "One-page AI policy + governance framework",
+          "Handover with your team"
+        ],
+        "whatYouGet": "A strategy document you can actually execute, a prioritised roadmap, and the governance guardrails to keep it safe.",
+        "bestFor": "SMEs ready to commit who want the plan before deploying to teams."
+      },
+      {
+        "title": "AI Accelerator Program",
+        "price": "Custom based on scope",
+        "timeline": "6-8 weeks",
+        "phases": {
+          "Weeks 1-2: Assess & Strategize": ["Everything from an 'AI Strategy Sprint'"] ,
+          "Weeks 3-4: Train Leadership": [
+            "Executive and manager training",
+            "Role-based prompt packs for key functions",
+            "Output review checklists",
+            "Tool setup"
+          ],
+          "Weeks 5-6: Deploy to Teams": [
+            "Core literacy training for staff",
+            "Role-based sessions for 2-3 functions",
+            "Workflows documented",
+            "Measurement framework"
+          ],
+          "Weeks 7-8: Launch Support": [
+            "First AI wins session",
+            "Workflow refinement",
+            "Manager coaching",
+            "90-day sustainability plan"
+          ]
+        },
+        "whatYouGet": "Strategy built, team trained, AI in use, and metrics showing what's working. Your people have the skills, the guardrails, and the confidence to actually use it.",
+        "bestFor": "SMEs ready for full AI adoption with hands-on support from start to finish."
+      }
+    ],
+    "why": {
+      "content": "The AI Guides sit in the gap most Australian SMEs actually have: you don't need a 6-month transformation, you need someone to tell you which AI moves to make today, how to train your people, and how to keep it safe.\n\nWe've spent decades advising executives, we're bullish on AI but disciplined about risk, and we package the work with clear resources your teams can reuse — so what we do with you doesn't disappear after the workshop.",
+      "primaryCta": { "label": "Get in touch with us!", "href": "/contact" },
+      "secondaryCta": { "label": "Start the AI Readiness Survey", "href": "/ai-readiness-survey" }
+    }
+  },
+  "about": {
+    "title": "About - Trusted AI Advisors",
+    "hero": {
+      "text": "Empowering Australian businesses with practical AI strategy, training, and guidance for real-world results.",
+      "primaryCta": { "label": "Explore Our Services", "href": "/services" },
+      "secondaryCta": { "label": "Contact Our Team", "href": "/contact" }
+    },
+    "whoWeAre": "We use \"AI guides\" in two ways. First, we create practical resources — articles, checklists, and playbooks — to help executives make sense of rapid AI change. Second, we act as your AI guides — the team you can call to prioritise the right use-cases, design training for your people, and put simple guardrails in place so AI is used safely.\n\nWe started The AI Guides because we kept seeing the same issue in Australian SMEs: AI was moving faster than most teams could absorb, and there wasn't a trusted, business-first partner to translate it into their context. These businesses see the potential, but they don't always have spare strategy or change capacity, so they need advice that's right-sized — fast to understand, affordable to implement, and practical for teams that are already busy. That's the gap we're here to close.",
+    "founders": [
+      {
+        "name": "Patrick",
+        "title": "Co-Founder & Principal Advisor",
+        "bio": "Patrick spent a decade in top-tier strategy firms, working with leadership teams across five continents on growth strategy, digital transformation, and change management. He co-founded The AI Guides to help Australian SMEs cut through the AI hype with practical guidance. When he's not working with clients, Patrick is doing laps at Clovelly and on a mission to find Sydney's best pastries.",
+        "image": "https://theaiguides.co/wp-content/uploads/2025/11/1140498657-1.jpg"
+      },
+      {
+        "name": "Jarrod",
+        "title": "Co-Founder & Principal Advisor",
+        "bio": "Jarrod has spent over a decade building ventures, shaping strategy for major organisations, and leading high-performing teams across Australia, the UK, and Asia. His background spans fintech, social impact, and innovation. His approach blends strategic thinking with hands-on delivery. He's a keen soccer nut and known to enjoy antiques shopping.",
+        "image": "https://theaiguides.co/wp-content/uploads/2025/11/1140498657-1.jpg"
+      }
+    ],
+    "howWeWork": [
+      {
+        "title": "Assess",
+        "content": "We evaluate your current capabilities, readiness, and business needs to identify AI opportunities that truly matter.",
+        "cta": { "label": "Learn More", "href": "/services" }
+      },
+      {
+        "title": "Prioritise",
+        "content": "We help you focus on the most valuable and achievable AI projects, aligning actions to your strategic goals.",
+        "cta": { "label": "See Our Process", "href": "/services" }
+      },
+      {
+        "title": "Implement",
+        "content": "We guide you through practical implementation, ensuring solutions are delivered efficiently and with minimal disruption.",
+        "cta": { "label": "Start Your Project", "href": "/contact" }
+      },
+      {
+        "title": "Upskill",
+        "content": "We provide expert-led training to build your team's AI literacy and confidence, empowering lasting capability.",
+        "cta": { "label": "Explore Training", "href": "/executive-training" }
+      },
+      {
+        "title": "Govern",
+        "content": "We help you establish robust AI governance practices, ensuring ongoing compliance, ethics, and risk management.",
+        "cta": { "label": "Discover Governance", "href": "/resources" }
+      }
+    ],
+    "where": {
+      "content": "Based in Sydney, The AI Guides proudly serve businesses across Australia and New Zealand. Our team understands the unique challenges and opportunities in this region, enabling us to deliver AI strategies and training that are both locally relevant and globally informed. Whether your organisation is in a major city or a regional centre, we are committed to helping you unlock the full potential of AI.",
+      "cta": { "label": "Talk to an AI Guide", "href": "/contact" }
+    }
+  },
+  "contact": {
+    "title": "Contact The AI Guides – We'd love to hear from you!",
+    "note": "Business Address and Phone are on the way!",
+    "email": "contact@theaiguides.co",
+    "faqs": [
+      {
+        "question": "What types of businesses does The AI Guides work with?",
+        "answer": "We specialise in supporting Australian SMEs across a range of industries, focusing on businesses seeking practical guidance for AI adoption, strategy, and workforce upskilling. If you are a business leader interested in leveraging AI, our services are tailored for your needs.",
+        "link": { "label": "Learn more about our services", "href": "/services" }
+      },
+      {
+        "question": "How do I know if my business is ready for AI?",
+        "answer": "Our AI Readiness Survey helps you assess your organisation's current state and identify opportunities for AI integration in your operations. The survey covers key areas including strategy, data, skills, and governance.",
+        "link": { "label": "Take the Readiness Survey", "href": "/ai-readiness-survey" }
+      },
+      {
+        "question": "What is included in your executive AI training?",
+        "answer": "Our executive training provides leaders with actionable insights on AI fundamentals, governance, ethical considerations, and strategic planning for successful adoption. Training sessions can be customised to your industry and leadership team needs.",
+        "link": { "label": "See Executive Training", "href": "/executive-training" }
+      },
+      {
+        "question": "How do I engage The AI Guides for advice?",
+        "answer": "Engaging us is simple: reach out via our contact form with your enquiry, and our team will respond promptly to discuss your needs and next steps. We are committed to providing timely support and clear guidance tailored to your business."
+      },
+      {
+        "question": "Can The AI Guides help with ongoing AI governance and strategy?",
+        "answer": "Yes, we offer advisory services to help you establish robust AI governance frameworks and ongoing strategies to ensure responsible, effective use of AI within your business. Our experts provide continued support as your AI journey evolves.",
+        "link": { "label": "Explore our services", "href": "/services" }
+      }
+    ],
+    "finalCta": {
+      "content": "Ready to future-proof your business with AI? Connect with The AI Guides to discuss your goals, or complete our AI Readiness Survey to identify your organisation's opportunities. Let us help you build a confident, practical AI strategy tailored to your needs.",
+      "cta": { "label": "Start the AI Readiness Survey", "href": "/ai-readiness-survey" }
+    }
+  },
+  "executiveTraining": {
+    "title": "Executive Training - Executive & Leadership AI Training",
+    "hero": {
+      "headline": "Training for AI-ready Teams",
+      "text": "Give your teams the clarity, guardrails, and skills to use AI in the business — not just talk about it.",
+      "primaryCta": { "label": "Book a session", "href": "/contact" },
+      "secondaryCta": { "label": "Talk to an AI Guide", "href": "/contact" }
+    },
+    "overview": "AI is moving fast, but most leadership teams are only seeing fragments — a vendor demo here, a new feature there — without a simple plan for their business. Our executive training fixes that. We help Australian SMEs understand what AI actually is, where it creates value, what to do first, and how to get people using it safely.",
+    "benefits": [
+      {
+        "title": "Shared Understanding",
+        "content": "Plain-English explanation of AI, GenAI, and the current tool landscape for leaders and teams.",
+        "bullets": ["No technical jargon", "Covers latest AI trends and tools", "Builds a common language across leadership"]
+      },
+      {
+        "title": "Resources to Revisit",
+        "content": "Ongoing access to written 'AI guides' for leaders and teams to reference anytime.",
+        "bullets": ["Always-available resources", "Regularly updated content", "Practical, easy-to-read guides"]
+      }
+    ],
+    "formats": [
+      {
+        "title": "90-minute Executive Briefing (~$4,500)",
+        "description": "Focused session covering the AI landscape, key SME risks, and actionable next steps for executive decision-makers."
+      },
+      {
+        "title": "Half-day Leadership Workshop (~$9,500)",
+        "description": "Interactive workshop to identify top processes, score 6–8 AI opportunities, draft policy, and define your 90-day action plan."
+      },
+      {
+        "title": "4–12 Week Program (Price Variable)",
+        "description": "Comprehensive training covering AI foundations, use-case design, governance, and adoption, tailored to your leadership functions."
+      }
+    ],
+    "agenda": [
+      "Introduction to AI: Key concepts, terminology, and business relevance.",
+      "AI Strategy for Leaders: Aligning AI initiatives with organisational objectives.",
+      "Identifying High-Impact Use Cases: Practical frameworks for AI adoption in SMEs.",
+      "Navigating AI Governance and Risk: Ensuring responsible and compliant AI deployment.",
+      "Interactive Case Studies: Real-world applications and lessons learned from Australian businesses.",
+      "Action Planning: Next steps to drive AI readiness and capability within your organisation."
+    ],
+    "image": "https://theaiguides.co/wp-content/uploads/2025/11/2220841315-2-1024x683.jpg",
+    "closing": "Strategy without trained people stalls. Training without strategy scatters. This executive training brings both together, your leaders get a clear direction for AI and the practical guardrails to let teams start using it immediately.",
+    "finalCta": {
+      "content": "Ready to upskill your leadership team?\n\nEmpower your executives to lead confidently in an AI-driven landscape. Our tailored training sessions equip your team with practical strategies and actionable insights for successful AI adoption.",
+      "cta": { "label": "Book an executive session", "href": "/contact" }
+    }
+  },
+  "readinessSurvey": {
+    "title": "AI Readiness Survey - Exclusive for Australian SMEs",
+    "hero": {
+      "headline": "AI Readiness Survey",
+      "text": "Find out how prepared your business is to use AI — and get the 3–5 actions to take in the next 30 days."
+    },
+    "how": {
+      "content": "Most SMEs can only focus on a few AI initiatives at a time. The problem is choosing the right ones — the ones your people can actually deliver, with the tools and data you already have. Our AI Readiness Survey gives you a quick, structured view of where you are now, across the areas that matter, so you can act with confidence.",
+      "steps": [
+        "Answer the survey – About 5 minutes, 20+ targeted questions.",
+        "Get your readiness snapshot – Instantly receive scores across five key areas.",
+        "Act on the quick wins – Or book time with The AI Guides to tailor your next steps."
+      ],
+      "privacy": "All responses are fully confidential and used only to generate your objective readiness assessment and personalised feedback. No individual data is shared or used for sales purposes."
+    },
+    "why": "AI is evolving at a remarkable pace, but many organisations find their internal capabilities struggling to keep up. Without a clear understanding of where your business currently stands, it becomes challenging to prioritise AI initiatives and accurately track progress.\n\nEstablishing a readiness baseline allows you to identify strengths and gaps across your people, processes, and data. This survey is designed to provide actionable insights, helping you focus on realistic AI opportunities that align with your current capabilities—ensuring your next steps are both practical and measurable.",
+    "cta": { "label": "Begin the Survey", "href": "/ai-readiness-survey" }
+  },
+  "resources": {
+    "title": "Guides & Insights",
+    "subtitle": "Practical AI guidance for Australian business leaders — blogs, checklists, and white papers you can read and use right away.",
+    "heroImage": "https://theaiguides.co/wp-content/uploads/2025/11/2166193783.jpg",
+    "latest": {
+      "heading": "Timely guidance and expert perspectives for SME leaders embracing AI",
+      "subheading": "Explore our latest guides and thought leadership, designed to help Australian SME executives and teams navigate the evolving AI landscape. These insights offer practical, actionable advice for leveraging AI in your business."
+    },
+    "featuredResources": [
+      {
+        "title": "SME AI Upskilling Playbook (2025)",
+        "description": "Your roadmap for building internal AI capability—covering skills, training pathways, and upskilling best practices.",
+        "image": "https://theaiguides.co/wp-content/uploads/2025/11/2241286143.jpg",
+        "href": "/sme-ai-upskilling-playbook-2025"
+      },
+      {
+        "title": "AI Readiness Checklist",
+        "description": "A practical checklist to assess your organisation's current AI capabilities and identify readiness gaps.",
+        "image": "https://theaiguides.co/wp-content/uploads/2025/11/1472540167.jpg",
+        "href": "https://theaiguides.co/wp-content/uploads/2025/11/TheAIGuides_AIReadinessChecklist_2025.pdf"
+      },
+      {
+        "title": "AI Implementation Guide",
+        "description": "Step-by-step guidance to help SMEs plan, pilot, and scale AI solutions efficiently and effectively.",
+        "image": "https://theaiguides.co/wp-content/uploads/2025/11/2202252667-2.jpg",
+        "href": "/executive-training"
+      },
+      {
+        "title": "AI Governance Best Practices",
+        "description": "An essential guide on establishing robust AI governance, ensuring ethical and compliant AI use in your organisation.",
+        "image": "https://theaiguides.co/wp-content/uploads/2025/11/2220841315-2.jpg",
+        "href": "/executive-guide-to-ai-governance-sme-edition"
+      }
+    ],
+    "finalCta": {
+      "headline": "Want these guides tailored to your business?",
+      "subheading": "Custom Workshops & AI Training for Your Team",
+      "cta": { "label": "Talk to an AI Guide", "href": "/contact" }
+    }
+  }
+}

@@ -831,25 +831,25 @@ function QuestionCard({
               onClick={() => onSelectAnswer(idx)}
               className={`w-full text-left p-4 rounded-xl border-2 transition-all ${
                 selectedAnswer === idx
-                  ? 'border-[var(--color-primary)] bg-blue-50'
-                  : 'border-gray-200 hover:border-blue-300 hover:bg-gray-50'
+                  ? 'border-[var(--color-primary)] bg-[var(--color-primary)] text-white'
+                  : 'border-gray-200 hover:border-[var(--color-primary)] hover:bg-gray-50'
               }`}
             >
               <div className="flex items-start gap-3">
                 <div
                   className={`w-6 h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 mt-0.5 transition-all ${
                     selectedAnswer === idx
-                      ? 'border-[var(--color-primary)] bg-[var(--color-primary)]'
+                      ? 'border-white bg-white'
                       : 'border-gray-300'
                   }`}
                 >
                   {selectedAnswer === idx && (
-                    <div className="w-2 h-2 bg-white rounded-full" />
+                    <div className="w-2 h-2 bg-[var(--color-primary)] rounded-full" />
                   )}
                 </div>
                 <div>
-                  <div className="font-medium text-[var(--color-text-primary)]">{option.label}</div>
-                  <div className="text-sm text-[var(--color-text-muted)] mt-1">{option.description}</div>
+                  <div className={`font-medium ${selectedAnswer === idx ? 'text-white' : 'text-[var(--color-text-primary)]'}`}>{option.label}</div>
+                  <div className={`text-sm mt-1 ${selectedAnswer === idx ? 'text-white/80' : 'text-[var(--color-text-muted)]'}`}>{option.description}</div>
                 </div>
               </div>
             </button>

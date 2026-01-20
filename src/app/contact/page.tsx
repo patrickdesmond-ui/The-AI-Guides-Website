@@ -60,9 +60,9 @@ export default function ContactPage() {
 
       {/* Contact Form Section */}
       <Section background="white">
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-5 gap-12">
           {/* Contact Form */}
-          <div>
+          <div className="lg:col-span-3">
             <h2 className="mb-6">Send Us a Message</h2>
             <form className="space-y-6" action="https://formspree.io/f/xkooqgnj" method="POST">
               {/* Honeypot field for spam protection */}
@@ -194,7 +194,7 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="lg:col-span-2">
             <h2 className="mb-6">Get in Touch</h2>
             <div className="space-y-6">
               <Card hover={false} className="bg-[var(--color-bg-secondary)]">

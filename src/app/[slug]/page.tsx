@@ -90,12 +90,12 @@ export default async function BlogPostPage({ params }: PageProps) {
             )}
           </div>
 
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+          <h1 className="text-2xl md:text-3xl font-semibold leading-snug mb-6 text-[var(--color-text-primary)]">
             {post.title}
           </h1>
 
           {post.excerpt && (
-            <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed">
+            <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
               {post.excerpt}
             </p>
           )}
@@ -115,7 +115,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       {/* Article Content */}
       <Section background="white">
         <Container size="narrow">
-          <article className="prose prose-lg max-w-none prose-headings:text-[var(--color-text-primary)] prose-p:text-[var(--color-text-secondary)] prose-a:text-[var(--color-primary)] prose-a:no-underline hover:prose-a:underline prose-strong:text-[var(--color-text-primary)] prose-li:text-[var(--color-text-secondary)] prose-code:text-[var(--color-primary)] prose-code:bg-[var(--color-bg-secondary)] prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none">
+          <article className="prose-blog">
             {/* Render MDX content as HTML */}
             <div
               dangerouslySetInnerHTML={{
@@ -142,7 +142,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
           {/* Categories and Tags */}
           {((post.categories && post.categories.length > 0) || (post.tags && post.tags.length > 0)) && (
-            <div className="mt-12 pt-8 border-t border-[var(--color-border)]">
+            <div className="mt-16 pt-10 border-t border-[var(--color-border)]">
               {post.categories && post.categories.length > 0 && (
                 <div className="mb-4">
                   <span className="text-sm font-semibold text-[var(--color-text-primary)] mr-3">
@@ -186,7 +186,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       {relatedPosts.length > 0 && (
         <Section background="light">
           <Container>
-            <h2 className="text-2xl font-semibold text-center mb-8">More from The AI Guides</h2>
+            <h2 className="text-xl md:text-2xl font-semibold text-center mb-10 text-[var(--color-text-primary)]">More from The AI Guides</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {relatedPosts.map((relatedPost) => (
                 <Link

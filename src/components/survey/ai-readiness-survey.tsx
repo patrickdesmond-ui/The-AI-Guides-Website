@@ -817,7 +817,7 @@ function QuestionCard({
 }) {
   return (
     <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-      <div className="bg-[var(--color-primary)] p-6">
+      <div className="bg-slate-800 p-6">
         <div className="text-sm text-white/70 mb-2">Question {questionNumber}</div>
         <h3 className="text-xl font-semibold text-white">{question.question}</h3>
       </div>

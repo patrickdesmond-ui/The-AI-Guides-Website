@@ -23,7 +23,8 @@ const featuredResources = [
     title: 'AI Readiness Checklist',
     description:
       "A practical checklist to assess your organisation's current AI capabilities and identify readiness gaps.",
-    href: '/ai-readiness-survey',
+    href: '/ai-readiness-checklist',
+    target: '_blank' as const,
   },
   {
     title: 'AI Implementation Guide',
@@ -62,14 +63,19 @@ export default function ResourcesPage() {
         <SectionHeader title="Featured Resources" />
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {featuredResources.map((resource) => (
-            <Card key={resource.title} href={resource.href} className="h-full flex flex-col group">
+            <Card
+              key={resource.title}
+              href={resource.href}
+              target={'target' in resource ? resource.target : undefined}
+              className="h-full flex flex-col group"
+            >
               <CardTitle className="text-lg mb-2 group-hover:text-[var(--color-primary)] transition-colors">
                 {resource.title}
               </CardTitle>
               <CardDescription className="flex-1 text-sm">{resource.description}</CardDescription>
               <div className="mt-4">
                 <span className="text-[var(--color-primary)] font-medium text-sm">
-                  View resource →
+                  {'target' in resource && resource.target === '_blank' ? 'Open checklist ↗' : 'View resource →'}
                 </span>
               </div>
             </Card>

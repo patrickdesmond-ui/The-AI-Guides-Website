@@ -6,9 +6,10 @@ interface CardProps {
   className?: string;
   href?: string;
   hover?: boolean;
+  target?: '_blank' | '_self';
 }
 
-export function Card({ children, className, href, hover = true }: CardProps) {
+export function Card({ children, className, href, hover = true, target }: CardProps) {
   const baseStyles = cn(
     'bg-white rounded-xl border border-[var(--color-border)] p-6',
     hover && 'transition-all duration-200 hover:shadow-lg hover:border-[var(--color-primary-light)]',
@@ -17,7 +18,12 @@ export function Card({ children, className, href, hover = true }: CardProps) {
 
   if (href) {
     return (
-      <Link href={href} className={cn(baseStyles, 'block')}>
+      <Link
+        href={href}
+        className={cn(baseStyles, 'block')}
+        target={target}
+        rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+      >
         {children}
       </Link>
     );

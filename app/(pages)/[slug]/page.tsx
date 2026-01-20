@@ -4,12 +4,17 @@ import pages from "@/data/pages.json";
 import posts from "@/data/posts.json";
 import { getPostBySlug } from "@/lib/content";
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
 }
 
-export default function PostPage({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug);
+export default async function PostPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
   if (!post) return notFound();
 
   return (

@@ -1400,7 +1400,7 @@ export default function AIImplementationGuidePage() {
                   },
                   {
                     title: 'SME AI Upskilling Playbook',
-                    href: '/sme-ai-upskilling-playbook-2025',
+                    href: '/sme-ai-upskilling-playbook-2026',
                     desc: 'Build team capability',
                   },
                 ].map((link, i) => (
@@ -1484,7 +1484,7 @@ export default function AIImplementationGuidePage() {
       <section className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-dark)] py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 style={{ color: 'white' }} className="mb-4">Have Questions? We&apos;re Here to Help.</h2>
-          <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-white mb-8 max-w-2xl mx-auto">
             Whether you&apos;re still assessing your readiness or ready to start a pilot, we&apos;re
             happy to answer questions and point you in the right direction—no obligations.
           </p>

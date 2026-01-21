@@ -21,10 +21,10 @@ const featuredResources = [
     href: '/ai-leadership-essentials',
   },
   {
-    title: 'SME AI Upskilling Playbook (2025)',
+    title: 'SME AI Upskilling Playbook (2026)',
     description:
       'Your roadmap for building internal AI capability—covering skills, training pathways, and upskilling best practices.',
-    href: '/sme-ai-upskilling-playbook-2025',
+    href: '/sme-ai-upskilling-playbook-2026',
   },
   {
     title: 'AI Readiness Checklist',

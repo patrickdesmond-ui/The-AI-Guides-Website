@@ -44,14 +44,14 @@ const services = [
 const packages = [
   {
     title: 'AI Foundations Workshop',
-    price: 'from $19,500',
-    timeline: '2-3 days',
+    price: 'From $19,500 AUD (ex-GST)',
+    timeline: '1 day + follow-up',
     includes: [
-      'Half-day facilitated session with your leadership team',
-      'AI landscape overview & priority discussion',
+      'Half-day facilitated workshop with your leadership team',
+      'AI landscape briefing and priority-setting discussion',
       'One-page AI policy with red/amber/green data rules',
-      'Approved tools list & next steps',
-      'Follow-up session to lock it in',
+      'Approved tools list and immediate next steps',
+      '2-hour follow-up session to embed decisions',
     ],
     whatYouGet:
       "Leadership aligned on your top 2-3 priorities, a policy people can actually understand, and clarity on what happens next.",
@@ -59,7 +59,7 @@ const packages = [
   },
   {
     title: 'AI Strategy Sprint',
-    price: 'from $39,500',
+    price: 'From $39,500 AUD (ex-GST)',
     timeline: '2 weeks',
     includes: [
       'Executive alignment session',
@@ -76,7 +76,7 @@ const packages = [
   },
   {
     title: 'AI Accelerator Program',
-    price: 'Custom based on scope',
+    price: 'Custom pricing (ex-GST)',
     timeline: '6-8 weeks',
     includes: [
       "Weeks 1-2: Everything from an 'AI Strategy Sprint'",
@@ -96,8 +96,8 @@ export default function ServicesPage() {
       <Hero
         title="AI Advisory Services for Australian SMEs"
         subtitle="Our services are built for Australian SMEs that want AI to show up in day-to-day operations — not just in a presentation. We start with strategy, enable your people through executive and team training, and support you to implement AI safely with clear governance."
-        primaryCta={{ text: 'Book a Session', href: '/contact' }}
-        secondaryCta={{ text: 'About The AI Guides', href: '/about' }}
+        primaryCta={{ text: 'Free AI Readiness Survey', href: '/ai-readiness-survey' }}
+        secondaryCta={{ text: 'Book a 30-Minute Call', href: '/contact' }}
       />
 
       {/* Services Section */}
@@ -195,8 +195,93 @@ export default function ServicesPage() {
         </div>
       </Section>
 
+      {/* How We Work */}
+      <Section background="white" id="how-we-work">
+        <SectionHeader
+          title="How We Work"
+          subtitle="We collaborate closely with your team to get AI embedded in your business — with governance, training, and measurable results."
+        />
+        <div className="max-w-5xl mx-auto">
+          {/* Timeline header */}
+          <p className="text-center text-sm text-[var(--color-text-muted)] mb-6">
+            Sample timeline in our 90-day approach
+          </p>
+
+          <div className="grid md:grid-cols-4 gap-6">
+            {/* Stage 1 */}
+            <div className="relative">
+              <div className="bg-[var(--color-primary)] text-white rounded-xl p-6">
+                <h3 className="text-lg font-semibold mb-3">Align & Assess</h3>
+                <ul className="text-sm space-y-2 opacity-90">
+                  <li>• Executive alignment session</li>
+                  <li>• AI policy drafted</li>
+                  <li>• Tool shortlist approved</li>
+                </ul>
+              </div>
+              <p className="text-xs text-[var(--color-text-muted)] text-center mt-2">Weeks 1–2</p>
+              <div className="hidden md:block absolute top-1/3 -right-3 w-6 h-0.5 bg-[var(--color-border)]" />
+            </div>
+
+            {/* Stage 2 */}
+            <div className="relative">
+              <div className="bg-[var(--color-bg-secondary)] rounded-xl p-6 border border-[var(--color-border)]">
+                <h3 className="text-lg font-semibold text-[var(--color-text-primary)] mb-3">Plan & Prioritise</h3>
+                <ul className="text-sm space-y-2 text-[var(--color-text-secondary)]">
+                  <li>• Use-case prioritisation</li>
+                  <li>• 90-day roadmap created</li>
+                  <li>• Vendor evaluation</li>
+                </ul>
+              </div>
+              <p className="text-xs text-[var(--color-text-muted)] text-center mt-2">Weeks 3–4</p>
+              <div className="hidden md:block absolute top-1/3 -right-3 w-6 h-0.5 bg-[var(--color-border)]" />
+            </div>
+
+            {/* Stage 3 */}
+            <div className="relative">
+              <div className="bg-[var(--color-bg-secondary)] rounded-xl p-6 border border-[var(--color-border)]">
+                <h3 className="text-lg font-semibold text-[var(--color-text-primary)] mb-3">Build & Train</h3>
+                <ul className="text-sm space-y-2 text-[var(--color-text-secondary)]">
+                  <li>• 2–3 workflows shipped</li>
+                  <li>• Team training complete</li>
+                  <li>• Prompt packs deployed</li>
+                </ul>
+              </div>
+              <p className="text-xs text-[var(--color-text-muted)] text-center mt-2">Weeks 5–8</p>
+              <div className="hidden md:block absolute top-1/3 -right-3 w-6 h-0.5 bg-[var(--color-border)]" />
+            </div>
+
+            {/* Stage 4 */}
+            <div>
+              <div className="bg-[var(--color-success)]/10 rounded-xl p-6 border border-[var(--color-success)]/30">
+                <h3 className="text-lg font-semibold text-[var(--color-text-primary)] mb-3">Embed & Sustain</h3>
+                <ul className="text-sm space-y-2 text-[var(--color-text-secondary)]">
+                  <li>• Governance cadence set</li>
+                  <li>• Metrics dashboard live</li>
+                  <li>• Handover complete</li>
+                </ul>
+              </div>
+              <p className="text-xs text-[var(--color-text-muted)] text-center mt-2">Weeks 9–12</p>
+            </div>
+          </div>
+
+          <div className="mt-10 text-center">
+            <p className="text-[var(--color-text-secondary)] mb-6">
+              By day 90, your team has AI in use, guardrails in place, and metrics showing what&apos;s working.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button href="/ai-readiness-survey">
+                See Where You Stand
+              </Button>
+              <Button href="/contact" variant="outline">
+                Talk to Us About Your Timeline
+              </Button>
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* Why Section */}
-      <Section background="white">
+      <Section background="light">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="mb-6">Why Choose The AI Guides?</h2>
           <p className="text-lg text-[var(--color-text-secondary)] mb-6">
@@ -205,7 +290,7 @@ export default function ServicesPage() {
             to train your people, and how to keep it safe.
           </p>
           <p className="text-lg text-[var(--color-text-secondary)]">
-            We&apos;ve spent decades advising executives, we&apos;re bullish on AI but disciplined
+            We&apos;ve spent 20+ years combined advising executives, we&apos;re bullish on AI but disciplined
             about risk, and we package the work with clear resources your teams can reuse — so what
             we do with you doesn&apos;t disappear after the workshop.
           </p>
@@ -215,8 +300,8 @@ export default function ServicesPage() {
       <CtaBand
         title="Ready to Get Started?"
         subtitle="Let's discuss how we can help your business navigate AI adoption with confidence."
-        primaryCta={{ text: 'Get in Touch', href: '/contact' }}
-        secondaryCta={{ text: 'Take the AI Readiness Survey', href: '/ai-readiness-survey' }}
+        primaryCta={{ text: 'Free AI Readiness Survey', href: '/ai-readiness-survey' }}
+        secondaryCta={{ text: 'Book a 30-Minute Call', href: '/contact' }}
       />
     </>
   );

@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { PostCard } from '@/components/blog';
 import { getAllPosts } from '@/lib/blog';
 import { CtaBand } from '@/components/sections';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Guides & Insights',
@@ -40,8 +41,27 @@ const featuredResources = [
   },
 ];
 
-export default function ResourcesPage() {
-  const posts = getAllPosts();
+interface PageProps {
+  searchParams: Promise<{ category?: string; tag?: string }>;
+}
+
+export default async function ResourcesPage({ searchParams }: PageProps) {
+  const { category, tag } = await searchParams;
+  const allPosts = getAllPosts();
+
+  // Filter posts based on category or tag
+  const posts = allPosts.filter((post) => {
+    if (category) {
+      return post.categories?.some((c) => c.toLowerCase() === category.toLowerCase());
+    }
+    if (tag) {
+      return post.tags?.some((t) => t.toLowerCase() === tag.toLowerCase());
+    }
+    return true;
+  });
+
+  const activeFilter = category || tag;
+  const filterType = category ? 'category' : tag ? 'tag' : null;
 
   return (
     <>
@@ -86,9 +106,29 @@ export default function ResourcesPage() {
       {/* Latest Articles */}
       <Section background="light">
         <SectionHeader
-          title="Timely guidance and expert perspectives for SME leaders embracing AI"
-          subtitle="Explore our latest guides and thought leadership, designed to help Australian SME executives and teams navigate the evolving AI landscape. These insights offer practical, actionable advice for leveraging AI in your business."
+          title={activeFilter ? `Articles: ${activeFilter}` : "Timely guidance and expert perspectives for SME leaders embracing AI"}
+          subtitle={activeFilter ? undefined : "Explore our latest guides and thought leadership, designed to help Australian SME executives and teams navigate the evolving AI landscape. These insights offer practical, actionable advice for leveraging AI in your business."}
         />
+
+        {activeFilter && (
+          <div className="mb-8 flex items-center gap-3">
+            <span className="text-sm text-[var(--color-text-muted)]">
+              Filtered by {filterType}:
+            </span>
+            <span className="inline-flex items-center gap-2 text-sm px-3 py-1 rounded-full bg-[var(--color-primary)] text-white">
+              {activeFilter}
+              <Link
+                href="/resources"
+                className="hover:bg-white/20 rounded-full p-0.5 transition-colors"
+                aria-label="Clear filter"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </Link>
+            </span>
+          </div>
+        )}
 
         {posts.length > 0 ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -98,7 +138,14 @@ export default function ResourcesPage() {
           </div>
         ) : (
           <div className="text-center py-12">
-            <p className="text-[var(--color-text-muted)]">No articles yet. Check back soon!</p>
+            <p className="text-[var(--color-text-muted)]">
+              {activeFilter ? `No articles found for ${filterType} "${activeFilter}".` : 'No articles yet. Check back soon!'}
+            </p>
+            {activeFilter && (
+              <Link href="/resources" className="text-[var(--color-primary)] hover:underline mt-2 inline-block">
+                View all articles →
+              </Link>
+            )}
           </div>
         )}
       </Section>
@@ -106,7 +153,8 @@ export default function ResourcesPage() {
       <CtaBand
         title="Want these guides tailored to your business?"
         subtitle="Custom Workshops & AI Training for Your Team"
-        primaryCta={{ text: 'Talk to an AI Guide', href: '/contact' }}
+        primaryCta={{ text: 'Free AI Readiness Survey', href: '/ai-readiness-survey' }}
+        secondaryCta={{ text: 'Book a 30-Minute Call', href: '/contact' }}
         variant="primary"
       />
     </>

@@ -335,11 +335,11 @@ export function InteractiveChecklist() {
             If this checklist surfaced gaps, book a 30-minute discovery call. We&apos;ll help you prioritize your next 2-3 moves and map a 90-day plan.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/contact" size="lg">
-              Book a Discovery Call
+            <Button href="/ai-readiness-survey" size="lg">
+              Free AI Readiness Survey
             </Button>
-            <Button href="/ai-readiness-survey" variant="outline" size="lg">
-              Take the Full Survey
+            <Button href="/contact" variant="outline" size="lg">
+              Book a 30-Minute Call
             </Button>
           </div>
         </div>

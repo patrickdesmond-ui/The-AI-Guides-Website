@@ -519,9 +519,14 @@ export default function UpskillingPlaybookPage() {
           <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
             We can run your Phase 1 executive session, draft your one-page policy, design role-based prompt packs, and set up measurement — then hand it to your team to sustain.
           </p>
-          <Button href="/contact" variant="secondary" size="lg">
-            Book a Discovery Call
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="/ai-readiness-survey" variant="secondary" size="lg">
+              Free AI Readiness Survey
+            </Button>
+            <Button href="/contact" variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
+              Book a 30-Minute Call
+            </Button>
+          </div>
         </div>
       </section>
 

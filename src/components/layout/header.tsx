@@ -8,7 +8,6 @@ import { Logo } from '@/components/ui/logo';
 import { cn } from '@/lib/utils';
 
 const navigation = [
-  { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
   { label: 'Executive Training', href: '/executive-training' },
   { label: 'AI Readiness Survey', href: '/ai-readiness-survey' },
@@ -30,12 +29,12 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center justify-center flex-1 mx-8">
             {navigation.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="px-3 py-2 text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] transition-colors rounded-md hover:bg-[var(--color-bg-secondary)]"
+                className="px-4 py-2 text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] transition-colors rounded-md hover:bg-[var(--color-bg-secondary)] text-center"
               >
                 {item.label}
               </Link>
@@ -43,9 +42,9 @@ export function Header() {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:block">
-            <Button href="/contact" size="sm">
-              Talk to an AI Guide
+          <div className="hidden lg:block flex-shrink-0">
+            <Button href="/ai-readiness-survey" size="sm">
+              Free AI Readiness Survey
             </Button>
           </div>
 
@@ -89,8 +88,8 @@ export function Header() {
               </Link>
             ))}
             <div className="pt-4 px-3">
-              <Button href="/contact" className="w-full">
-                Talk to an AI Guide
+              <Button href="/ai-readiness-survey" className="w-full">
+                Free AI Readiness Survey
               </Button>
             </div>
           </div>

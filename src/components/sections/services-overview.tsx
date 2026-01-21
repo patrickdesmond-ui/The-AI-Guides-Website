@@ -37,7 +37,7 @@ const services = [
     title: 'Implementation Support',
     description:
       'Receive end-to-end support for AI solution deployment. We help you manage change, integrate new technologies, and ensure your AI investments deliver measurable value.',
-    href: '/contact',
+    href: '/#how-we-work',
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path

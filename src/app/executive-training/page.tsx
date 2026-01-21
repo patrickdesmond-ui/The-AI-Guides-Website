@@ -13,20 +13,20 @@ export const metadata: Metadata = {
 const trainingFormats = [
   {
     title: '90-minute Executive Briefing',
-    price: '~$4,500',
+    price: 'From $4,500 AUD (ex-GST)',
     description:
       'Focused session covering the AI landscape, key SME risks, and actionable next steps for executive decision-makers.',
   },
   {
     title: 'Half-day Leadership Workshop',
-    price: '~$9,500',
+    price: 'From $9,500 AUD (ex-GST)',
     description:
       'Interactive workshop to identify top processes, score 6–8 AI opportunities, draft policy, and define your 90-day action plan.',
     featured: true,
   },
   {
     title: '4–12 Week Program',
-    price: 'Price Variable',
+    price: 'Custom pricing (ex-GST)',
     description:
       'Comprehensive training covering AI foundations, use-case design, governance, and adoption, tailored to your leadership functions.',
   },
@@ -60,8 +60,8 @@ export default function ExecutiveTrainingPage() {
       <Hero
         title="Training for AI-ready Teams"
         subtitle="Give your teams the clarity, guardrails, and skills to use AI in the business — not just talk about it."
-        primaryCta={{ text: 'Book a Session', href: '/contact' }}
-        secondaryCta={{ text: 'Talk to an AI Guide', href: '/contact' }}
+        primaryCta={{ text: 'Free AI Readiness Survey', href: '/ai-readiness-survey' }}
+        secondaryCta={{ text: 'Book a 30-Minute Call', href: '/contact' }}
       />
 
       {/* Intro Section */}
@@ -180,7 +180,8 @@ export default function ExecutiveTrainingPage() {
       <CtaBand
         title="Ready to upskill your leadership team?"
         subtitle="Empower your executives to lead confidently in an AI-driven landscape. Our tailored training sessions equip your team with practical strategies and actionable insights for successful AI adoption."
-        primaryCta={{ text: 'Book an Executive Session', href: '/contact' }}
+        primaryCta={{ text: 'Free AI Readiness Survey', href: '/ai-readiness-survey' }}
+        secondaryCta={{ text: 'Book a 30-Minute Call', href: '/contact' }}
       />
     </>
   );

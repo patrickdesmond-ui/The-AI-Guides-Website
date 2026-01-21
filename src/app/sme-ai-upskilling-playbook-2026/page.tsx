@@ -5,9 +5,9 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'SME AI Upskilling Playbook (2025) | The AI Guides',
+  title: 'SME AI Upskilling Playbook (2026) | The AI Guides',
   description:
-    'A 2025-ready playbook for Australian SMEs to upskill their workforce on AI — covering leadership alignment, role-based training, governance, and measurement.',
+    'A 2026-ready playbook for Australian SMEs to upskill their workforce on AI — covering leadership alignment, role-based training, governance, and measurement.',
 };
 
 // Section navigation data
@@ -197,7 +197,7 @@ export default function UpskillingPlaybookPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <span className="inline-block text-sm font-medium text-[var(--color-primary)] bg-blue-50 px-3 py-1 rounded-full mb-4">
-              2025 Edition
+              2026 Edition
             </span>
             <h1 className="mb-6">SME AI Upskilling Playbook</h1>
             <p className="text-lg md:text-xl text-[var(--color-text-secondary)] mb-8">
@@ -516,7 +516,7 @@ export default function UpskillingPlaybookPage() {
       <section className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-dark)] py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h2 className="text-white mb-4">Want help implementing this playbook?</h2>
-          <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-white mb-8 max-w-2xl mx-auto">
             We can run your Phase 1 executive session, draft your one-page policy, design role-based prompt packs, and set up measurement — then hand it to your team to sustain.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -543,7 +543,7 @@ export default function UpskillingPlaybookPage() {
               <CardTitle className="text-base mb-2">AI Strategy Essentials for SMEs</CardTitle>
               <CardDescription className="text-sm">The 5-part strategy framework that actually works</CardDescription>
             </Card>
-            <Card href="/ai-skills-gap-australia-2025">
+            <Card href="/ai-skills-gap-australia-2026">
               <CardTitle className="text-base mb-2">The AI Skills Gap Is Real</CardTitle>
               <CardDescription className="text-sm">Why 59% of Australian workers are stuck waiting for training</CardDescription>
             </Card>

@@ -7,9 +7,9 @@ import { Button } from '@/components/ui/button';
 
 // Module navigation data
 const modules = [
-  { id: 'module-1', title: 'AI Foundations', number: 1, depth: 'full' },
-  { id: 'module-2', title: 'Finding Opportunities', number: 2, depth: 'full' },
-  { id: 'module-3', title: 'Evaluating Tools', number: 3, depth: 'full' },
+  { id: 'module-1', title: 'AI Foundations', number: 1, depth: 'detailed' },
+  { id: 'module-2', title: 'Finding Opportunities', number: 2, depth: 'detailed' },
+  { id: 'module-3', title: 'Evaluating Tools', number: 3, depth: 'detailed' },
   { id: 'module-4', title: 'Business Case', number: 4, depth: 'overview' },
   { id: 'module-5', title: 'Leading Adoption', number: 5, depth: 'overview' },
   { id: 'module-6', title: 'Governance & Risk', number: 6, depth: 'overview' },
@@ -79,21 +79,21 @@ const scorecardCriteria = [
 ];
 
 // Helper Components
-function ModuleDepthIndicator({ depth }: { depth: 'full' | 'overview' }) {
+function ModuleDepthIndicator({ depth }: { depth: 'detailed' | 'overview' }) {
   return (
     <span
       className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium ${
-        depth === 'full'
+        depth === 'detailed'
           ? 'bg-[var(--color-primary)] text-white'
           : 'bg-[var(--color-bg-secondary)] text-[var(--color-text-muted)] border border-[var(--color-border)]'
       }`}
     >
-      {depth === 'full' ? (
+      {depth === 'detailed' ? (
         <>
           <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
             <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
           </svg>
-          Full Training
+          Detailed
         </>
       ) : (
         <>
@@ -312,7 +312,7 @@ export default function AILeadershipEssentialsPage() {
                     {module.title}
                   </div>
                 </div>
-                <ModuleDepthIndicator depth={module.depth as 'full' | 'overview'} />
+                <ModuleDepthIndicator depth={module.depth as 'detailed' | 'overview'} />
               </button>
             ))}
           </div>
@@ -365,7 +365,7 @@ export default function AILeadershipEssentialsPage() {
               </span>
               <h2 className="mb-0">AI Foundations</h2>
             </div>
-            <ModuleDepthIndicator depth="full" />
+            <ModuleDepthIndicator depth="detailed" />
           </div>
 
           <p className="text-lg text-[var(--color-text-secondary)] mb-6">
@@ -469,7 +469,7 @@ export default function AILeadershipEssentialsPage() {
               </span>
               <h2 className="mb-0">Finding Opportunities</h2>
             </div>
-            <ModuleDepthIndicator depth="full" />
+            <ModuleDepthIndicator depth="detailed" />
           </div>
 
           <p className="text-lg text-[var(--color-text-secondary)] mb-6">
@@ -525,32 +525,6 @@ export default function AILeadershipEssentialsPage() {
               A simple tool for prioritising where to focus.
             </p>
             <OpportunityMatrix />
-            <div className="mt-6 grid sm:grid-cols-2 gap-4">
-              <div className="bg-green-50 rounded-lg p-4 border border-green-200">
-                <div className="font-semibold text-green-800 mb-1">Quick Wins</div>
-                <p className="text-sm text-green-700">
-                  Your starting point. These build momentum, generate learning, and create internal evidence that AI delivers value.
-                </p>
-              </div>
-              <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
-                <div className="font-semibold text-blue-800 mb-1">Strategic Bets</div>
-                <p className="text-sm text-blue-700">
-                  Worth pursuing, but with eyes open. These need proper resourcing, longer timelines, and executive sponsorship.
-                </p>
-              </div>
-              <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                <div className="font-semibold text-gray-700 mb-1">Easy Experiments</div>
-                <p className="text-sm text-gray-600">
-                  Good for building capability and testing new tools, but don&apos;t mistake activity for progress.
-                </p>
-              </div>
-              <div className="bg-red-50 rounded-lg p-4 border border-red-200">
-                <div className="font-semibold text-red-700 mb-1">Avoid</div>
-                <p className="text-sm text-red-600">
-                  Deprioritise ruthlessly. These drain resources without meaningful return.
-                </p>
-              </div>
-            </div>
             <p className="text-sm text-[var(--color-text-muted)] mt-4">
               Plot your potential initiatives on this matrix. If you&apos;re starting your AI journey, you want a portfolio weighted heavily toward Quick Wins with one or two Strategic Bets on the horizon.
             </p>
@@ -585,7 +559,7 @@ export default function AILeadershipEssentialsPage() {
               </span>
               <h2 className="mb-0">Evaluating Tools</h2>
             </div>
-            <ModuleDepthIndicator depth="full" />
+            <ModuleDepthIndicator depth="detailed" />
           </div>
 
           <p className="text-lg text-[var(--color-text-secondary)] mb-6">
@@ -865,10 +839,10 @@ export default function AILeadershipEssentialsPage() {
       <section className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-dark)] py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 style={{ color: 'white' }} className="mb-4">Ready to bring this to your leadership team?</h2>
-          <p className="text-lg text-blue-100 mb-4 max-w-2xl mx-auto">
+          <p className="text-lg text-white mb-4 max-w-2xl mx-auto">
             This curriculum adapts to your context — your industry, your challenges, your team&apos;s starting point.
           </p>
-          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
             We deliver customised executive workshops that turn AI understanding into confident action. Whether you&apos;re building foundational literacy across your leadership team or working through specific implementation challenges, we design training around what you actually need.
           </p>
           <Button

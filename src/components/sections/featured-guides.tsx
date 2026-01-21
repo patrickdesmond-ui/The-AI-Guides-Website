@@ -4,16 +4,16 @@ import { Card, CardTitle, CardDescription } from '@/components/ui/card';
 
 const featuredGuides = [
   {
-    title: 'AI Leadership Essentials',
-    description:
-      'A practical 7-module curriculum for executives navigating AI adoption — from foundations to implementation.',
-    href: '/ai-leadership-essentials',
-  },
-  {
     title: 'AI Implementation Guide',
     description:
       'Step-by-step guidance to help SMEs plan, pilot, and scale AI solutions efficiently and effectively.',
     href: '/ai-implementation-guide',
+  },
+  {
+    title: 'AI Leadership Essentials',
+    description:
+      'A practical 7-module curriculum for executives navigating AI adoption — from foundations to implementation.',
+    href: '/ai-leadership-essentials',
   },
   {
     title: 'Executive Guide to AI Governance (SME Edition)',
@@ -22,10 +22,10 @@ const featuredGuides = [
     href: '/executive-guide-to-ai-governance-sme-edition',
   },
   {
-    title: 'SME AI Upskilling Playbook (2025)',
+    title: 'SME AI Upskilling Playbook (2026)',
     description:
       'Your roadmap for building internal AI capability—covering skills, training pathways, and upskilling best practices.',
-    href: '/sme-ai-upskilling-playbook-2025',
+    href: '/sme-ai-upskilling-playbook-2026',
   },
 ];
 

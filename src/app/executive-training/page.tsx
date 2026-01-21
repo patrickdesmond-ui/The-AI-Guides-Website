@@ -175,7 +175,7 @@ export default function ExecutiveTrainingPage() {
                   Executive Curriculum
                 </span>
                 <h2 className="text-white mb-2">AI Leadership Essentials</h2>
-                <p className="text-white/70 text-sm mb-4">From $39,500 AUD (ex-GST)</p>
+                <p className="text-white text-sm mb-4">From $39,500 AUD (ex-GST)</p>
                 <p className="text-white mb-6">
                   Our training is built on a comprehensive 7-module curriculum covering everything executives need to navigate AI adoption with confidence — from AI foundations through to measuring success.
                 </p>

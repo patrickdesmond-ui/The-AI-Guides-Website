@@ -44,14 +44,14 @@ const services = [
 const packages = [
   {
     title: 'AI Foundations Workshop',
-    price: 'from $19,500',
-    timeline: '2-3 days',
+    price: 'From $19,500 AUD (ex-GST)',
+    timeline: '1 day + follow-up',
     includes: [
-      'Half-day facilitated session with your leadership team',
-      'AI landscape overview & priority discussion',
+      'Half-day facilitated workshop with your leadership team',
+      'AI landscape briefing and priority-setting discussion',
       'One-page AI policy with red/amber/green data rules',
-      'Approved tools list & next steps',
-      'Follow-up session to lock it in',
+      'Approved tools list and immediate next steps',
+      '2-hour follow-up session to embed decisions',
     ],
     whatYouGet:
       "Leadership aligned on your top 2-3 priorities, a policy people can actually understand, and clarity on what happens next.",
@@ -59,7 +59,7 @@ const packages = [
   },
   {
     title: 'AI Strategy Sprint',
-    price: 'from $39,500',
+    price: 'From $39,500 AUD (ex-GST)',
     timeline: '2 weeks',
     includes: [
       'Executive alignment session',
@@ -76,7 +76,7 @@ const packages = [
   },
   {
     title: 'AI Accelerator Program',
-    price: 'Custom based on scope',
+    price: 'Custom pricing (ex-GST)',
     timeline: '6-8 weeks',
     includes: [
       "Weeks 1-2: Everything from an 'AI Strategy Sprint'",
@@ -205,7 +205,7 @@ export default function ServicesPage() {
             to train your people, and how to keep it safe.
           </p>
           <p className="text-lg text-[var(--color-text-secondary)]">
-            We&apos;ve spent decades advising executives, we&apos;re bullish on AI but disciplined
+            We&apos;ve spent 20+ years combined advising executives, we&apos;re bullish on AI but disciplined
             about risk, and we package the work with clear resources your teams can reuse — so what
             we do with you doesn&apos;t disappear after the workshop.
           </p>

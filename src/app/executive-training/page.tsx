@@ -13,20 +13,20 @@ export const metadata: Metadata = {
 const trainingFormats = [
   {
     title: '90-minute Executive Briefing',
-    price: '~$4,500',
+    price: 'From $4,500 AUD (ex-GST)',
     description:
       'Focused session covering the AI landscape, key SME risks, and actionable next steps for executive decision-makers.',
   },
   {
     title: 'Half-day Leadership Workshop',
-    price: '~$9,500',
+    price: 'From $9,500 AUD (ex-GST)',
     description:
       'Interactive workshop to identify top processes, score 6–8 AI opportunities, draft policy, and define your 90-day action plan.',
     featured: true,
   },
   {
     title: '4–12 Week Program',
-    price: 'Price Variable',
+    price: 'Custom pricing (ex-GST)',
     description:
       'Comprehensive training covering AI foundations, use-case design, governance, and adoption, tailored to your leadership functions.',
   },

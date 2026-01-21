@@ -150,12 +150,13 @@ export default async function BlogPostPage({ params }: PageProps) {
                   </span>
                   <div className="inline-flex flex-wrap gap-2">
                     {post.categories.map((category) => (
-                      <span
+                      <Link
                         key={category}
-                        className="text-sm px-3 py-1 rounded-full bg-[var(--color-bg-secondary)] text-[var(--color-text-secondary)]"
+                        href={`/resources?category=${encodeURIComponent(category)}`}
+                        className="text-sm px-3 py-1 rounded-full bg-[var(--color-bg-secondary)] text-[var(--color-text-secondary)] hover:bg-[var(--color-primary)]/10 hover:text-[var(--color-primary)] transition-colors"
                       >
                         {category}
-                      </span>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -167,12 +168,13 @@ export default async function BlogPostPage({ params }: PageProps) {
                   </span>
                   <div className="inline-flex flex-wrap gap-2">
                     {post.tags.map((tag) => (
-                      <span
+                      <Link
                         key={tag}
-                        className="text-sm px-3 py-1 rounded-full bg-[var(--color-primary)]/10 text-[var(--color-primary)]"
+                        href={`/resources?tag=${encodeURIComponent(tag)}`}
+                        className="text-sm px-3 py-1 rounded-full bg-[var(--color-primary)]/10 text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white transition-colors"
                       >
                         {tag}
-                      </span>
+                      </Link>
                     ))}
                   </div>
                 </div>

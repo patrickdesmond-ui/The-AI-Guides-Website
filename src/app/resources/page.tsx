@@ -31,7 +31,7 @@ const featuredResources = [
     title: 'AI Implementation Guide',
     description:
       'Step-by-step guidance to help SMEs plan, pilot, and scale AI solutions efficiently and effectively.',
-    href: '/executive-training',
+    href: '/10-quick-wins-genai-services-finance-ops',
   },
   {
     title: 'AI Governance Best Practices',

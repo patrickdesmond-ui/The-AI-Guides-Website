@@ -1,14 +1,10 @@
-import type { Metadata } from 'next';
+'use client';
+
+import { useState, useCallback } from 'react';
 import { Section } from '@/components/ui/section';
 import { Card, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { AIReadinessSurvey } from '@/components/survey/ai-readiness-survey';
-
-export const metadata: Metadata = {
-  title: 'AI Readiness Survey - Exclusive for Australian SMEs',
-  description:
-    "Find out how prepared your business is to use AI — and get the 3–5 actions to take in the next 30 days. Free assessment for Australian SMEs.",
-};
 
 const steps = [
   {
@@ -68,6 +64,19 @@ const benefits = [
 ];
 
 export default function AIReadinessSurveyPage() {
+  const [autoStart, setAutoStart] = useState(false);
+
+  const handleStartSurvey = useCallback(() => {
+    // Set autoStart first so when we scroll, the survey starts automatically
+    setAutoStart(true);
+
+    // Smooth scroll to the survey section
+    const surveyElement = document.getElementById('survey');
+    if (surveyElement) {
+      surveyElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
+
   return (
     <>
       {/* Hero */}
@@ -79,7 +88,7 @@ export default function AIReadinessSurveyPage() {
               Find out how prepared your business is to use AI — and get the 3–5 actions to take in
               the next 30 days.
             </p>
-            <Button href="#survey" size="lg">
+            <Button onClick={handleStartSurvey} size="lg">
               Start the Survey
             </Button>
           </div>
@@ -157,7 +166,7 @@ export default function AIReadinessSurveyPage() {
       {/* Survey Embed Section */}
       <Section background="white" id="survey">
         <div className="max-w-4xl mx-auto">
-          <AIReadinessSurvey />
+          <AIReadinessSurvey autoStart={autoStart} />
 
           <p className="text-sm text-[var(--color-text-muted)] mt-8 text-center">
             Prefer to talk to someone first?{' '}

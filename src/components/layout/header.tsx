@@ -13,7 +13,6 @@ const navigation = [
   { label: 'AI Readiness Survey', href: '/ai-readiness-survey' },
   { label: 'AI Guides & Insights', href: '/resources' },
   { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/contact' },
 ];
 
 export function Header() {
@@ -41,8 +40,11 @@ export function Header() {
             ))}
           </div>
 
-          {/* Desktop CTA */}
-          <div className="hidden lg:block flex-shrink-0">
+          {/* Desktop CTAs */}
+          <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
+            <Button href="/contact" size="sm" variant="outline">
+              Contact
+            </Button>
             <Button href="/ai-readiness-survey" size="sm">
               Free AI Readiness Survey
             </Button>
@@ -87,7 +89,10 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <div className="pt-4 px-3">
+            <div className="pt-4 px-3 space-y-3">
+              <Button href="/contact" variant="outline" className="w-full">
+                Contact
+              </Button>
               <Button href="/ai-readiness-survey" className="w-full">
                 Free AI Readiness Survey
               </Button>

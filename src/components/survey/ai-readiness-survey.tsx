@@ -539,7 +539,7 @@ function getRecommendationLevel(score: number, maxScore: number): 'low' | 'mediu
 // Components
 function WelcomeScreen({ onStart }: { onStart: () => void }) {
   return (
-    <div className="text-center py-8">
+    <div className="text-center py-8 min-h-[600px]">
       <div className="inline-flex items-center gap-2 bg-[var(--color-primary)] text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
         Free Assessment
       </div>
@@ -675,7 +675,7 @@ function DataCaptureScreen({ onSubmit }: { onSubmit: (data: RespondentData) => v
   };
 
   return (
-    <div className="py-8">
+    <div className="py-8 min-h-[600px]">
       <div className="text-center mb-8">
         <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-text-primary)] mb-3">
           Before We Begin
@@ -1376,8 +1376,12 @@ function ResultsScreen({
 }
 
 // Main Component
-export function AIReadinessSurvey() {
-  const [stage, setStage] = useState<'welcome' | 'capture' | 'assessment' | 'results'>('welcome');
+interface AIReadinessSurveyProps {
+  autoStart?: boolean;
+}
+
+export function AIReadinessSurvey({ autoStart = false }: AIReadinessSurveyProps) {
+  const [stage, setStage] = useState<'welcome' | 'capture' | 'assessment' | 'results'>(autoStart ? 'capture' : 'welcome');
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<(number | null)[]>(new Array(questions.length).fill(null));
   const [respondentData, setRespondentData] = useState<RespondentData>({
@@ -1453,7 +1457,7 @@ export function AIReadinessSurvey() {
   const question = questions[currentQuestion];
 
   return (
-    <div>
+    <div className="min-h-[600px]">
       <ProgressBar
         currentQuestion={currentQuestion}
         totalQuestions={questions.length}

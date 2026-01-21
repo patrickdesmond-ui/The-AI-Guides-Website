@@ -4,6 +4,12 @@ import { Card, CardTitle, CardDescription } from '@/components/ui/card';
 
 const featuredGuides = [
   {
+    title: 'AI Leadership Essentials',
+    description:
+      'A practical 7-module curriculum for executives navigating AI adoption — from foundations to implementation.',
+    href: '/ai-leadership-essentials',
+  },
+  {
     title: 'AI Implementation Guide',
     description:
       'Step-by-step guidance to help SMEs plan, pilot, and scale AI solutions efficiently and effectively.',
@@ -31,7 +37,7 @@ export function FeaturedGuides() {
         subtitle="Explore our most valuable guides and insights, designed to help Australian SMEs navigate AI strategy, governance, and upskilling. Each resource delivers clear, practical advice to drive confident decision-making and sustainable transformation."
       />
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {featuredGuides.map((guide) => (
           <Card key={guide.title} href={guide.href} className="group h-full flex flex-col">
             <div className="flex-1">

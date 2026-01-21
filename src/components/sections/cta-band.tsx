@@ -22,7 +22,10 @@ export function CtaBand({
   secondaryCta,
   variant = 'primary',
 }: CtaBandProps) {
-  const bgClass = variant === 'primary' ? 'bg-[var(--color-primary)]' : 'bg-[var(--color-bg-secondary)]';
+  // Use a dark slate background for better contrast with white text
+  const bgClass = variant === 'primary' ? 'bg-slate-800' : 'bg-[var(--color-bg-secondary)]';
+  const textClass = variant === 'primary' ? 'text-white' : 'text-[var(--color-text-primary)]';
+  const subtitleClass = variant === 'primary' ? 'text-slate-300' : 'text-[var(--color-text-secondary)]';
 
   return (
     <section className={`py-16 md:py-20 ${bgClass}`}>
@@ -45,7 +48,7 @@ export function CtaBand({
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               href={primaryCta.href}
-              variant={variant === 'primary' ? 'secondary' : 'primary'}
+              variant="primary"
               size="lg"
             >
               {primaryCta.text}
@@ -53,9 +56,9 @@ export function CtaBand({
             {secondaryCta && (
               <Button
                 href={secondaryCta.href}
-                variant={variant === 'primary' ? 'ghost' : 'outline'}
+                variant="outline"
                 size="lg"
-                className={variant === 'primary' ? 'text-white hover:bg-white/10' : ''}
+                className={variant === 'primary' ? 'border-white text-white hover:bg-white/10' : ''}
               >
                 {secondaryCta.text}
               </Button>

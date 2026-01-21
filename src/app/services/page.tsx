@@ -209,8 +209,8 @@ export default function ServicesPage() {
 
           <div className="grid md:grid-cols-4 gap-6">
             {/* Stage 1 */}
-            <div className="relative">
-              <div className="bg-[var(--color-primary)] text-white rounded-xl p-6">
+            <div className="relative flex flex-col">
+              <div className="bg-blue-400 text-white rounded-xl p-6 flex-1 min-h-[180px]">
                 <h3 className="text-lg font-semibold mb-3">Align & Assess</h3>
                 <ul className="text-sm space-y-2 opacity-90">
                   <li>• Executive alignment session</li>
@@ -223,10 +223,10 @@ export default function ServicesPage() {
             </div>
 
             {/* Stage 2 */}
-            <div className="relative">
-              <div className="bg-[var(--color-bg-secondary)] rounded-xl p-6 border border-[var(--color-border)]">
-                <h3 className="text-lg font-semibold text-[var(--color-text-primary)] mb-3">Plan & Prioritise</h3>
-                <ul className="text-sm space-y-2 text-[var(--color-text-secondary)]">
+            <div className="relative flex flex-col">
+              <div className="bg-blue-500 text-white rounded-xl p-6 flex-1 min-h-[180px]">
+                <h3 className="text-lg font-semibold mb-3">Plan & Prioritise</h3>
+                <ul className="text-sm space-y-2 opacity-90">
                   <li>• Use-case prioritisation</li>
                   <li>• 90-day roadmap created</li>
                   <li>• Vendor evaluation</li>
@@ -237,10 +237,10 @@ export default function ServicesPage() {
             </div>
 
             {/* Stage 3 */}
-            <div className="relative">
-              <div className="bg-[var(--color-bg-secondary)] rounded-xl p-6 border border-[var(--color-border)]">
-                <h3 className="text-lg font-semibold text-[var(--color-text-primary)] mb-3">Build & Train</h3>
-                <ul className="text-sm space-y-2 text-[var(--color-text-secondary)]">
+            <div className="relative flex flex-col">
+              <div className="bg-blue-600 text-white rounded-xl p-6 flex-1 min-h-[180px]">
+                <h3 className="text-lg font-semibold mb-3">Build & Train</h3>
+                <ul className="text-sm space-y-2 opacity-90">
                   <li>• 2–3 workflows shipped</li>
                   <li>• Team training complete</li>
                   <li>• Prompt packs deployed</li>
@@ -251,10 +251,10 @@ export default function ServicesPage() {
             </div>
 
             {/* Stage 4 */}
-            <div>
-              <div className="bg-[var(--color-success)]/10 rounded-xl p-6 border border-[var(--color-success)]/30">
-                <h3 className="text-lg font-semibold text-[var(--color-text-primary)] mb-3">Embed & Sustain</h3>
-                <ul className="text-sm space-y-2 text-[var(--color-text-secondary)]">
+            <div className="flex flex-col">
+              <div className="bg-blue-700 text-white rounded-xl p-6 flex-1 min-h-[180px]">
+                <h3 className="text-lg font-semibold mb-3">Embed & Sustain</h3>
+                <ul className="text-sm space-y-2 opacity-90">
                   <li>• Governance cadence set</li>
                   <li>• Metrics dashboard live</li>
                   <li>• Handover complete</li>

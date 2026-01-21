@@ -15,6 +15,12 @@ export const metadata: Metadata = {
 
 const featuredResources = [
   {
+    title: 'AI Leadership Essentials',
+    description:
+      'A practical 7-module curriculum for executives navigating AI adoption — from foundations to implementation.',
+    href: '/ai-leadership-essentials',
+  },
+  {
     title: 'SME AI Upskilling Playbook (2025)',
     description:
       'Your roadmap for building internal AI capability—covering skills, training pathways, and upskilling best practices.',
@@ -81,25 +87,37 @@ export default async function ResourcesPage({ searchParams }: PageProps) {
       {/* Featured Resources */}
       <Section background="white">
         <SectionHeader title="Featured Resources" />
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {featuredResources.map((resource) => (
-            <Card
-              key={resource.title}
-              href={resource.href}
-              target={'target' in resource ? resource.target : undefined}
-              className="h-full flex flex-col group"
-            >
-              <CardTitle className="text-lg mb-2 group-hover:text-[var(--color-primary)] transition-colors">
-                {resource.title}
-              </CardTitle>
-              <CardDescription className="flex-1 text-sm">{resource.description}</CardDescription>
-              <div className="mt-4">
-                <span className="text-[var(--color-primary)] font-medium text-sm">
-                  {'target' in resource && resource.target === '_blank' ? 'Open checklist ↗' : 'View resource →'}
-                </span>
-              </div>
-            </Card>
-          ))}
+        <div className="relative">
+          {/* Scroll indicators */}
+          <div className="hidden md:block absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+          <div className="hidden md:block absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+
+          {/* Scrollable container */}
+          <div className="flex gap-6 overflow-x-auto pb-4 -mx-4 px-4 md:-mx-8 md:px-8 snap-x snap-mandatory scrollbar-thin scrollbar-thumb-[var(--color-border)] scrollbar-track-transparent">
+            {featuredResources.map((resource) => (
+              <Card
+                key={resource.title}
+                href={resource.href}
+                target={'target' in resource ? resource.target : undefined}
+                className="flex-shrink-0 w-[280px] md:w-[300px] flex flex-col group snap-start"
+              >
+                <CardTitle className="text-lg mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  {resource.title}
+                </CardTitle>
+                <CardDescription className="flex-1 text-sm">{resource.description}</CardDescription>
+                <div className="mt-4">
+                  <span className="text-[var(--color-primary)] font-medium text-sm">
+                    {'target' in resource && resource.target === '_blank' ? 'Open checklist ↗' : 'View resource →'}
+                  </span>
+                </div>
+              </Card>
+            ))}
+          </div>
+
+          {/* Scroll hint for mobile */}
+          <p className="text-center text-xs text-[var(--color-text-muted)] mt-2 md:hidden">
+            Swipe to see more resources →
+          </p>
         </div>
       </Section>
 

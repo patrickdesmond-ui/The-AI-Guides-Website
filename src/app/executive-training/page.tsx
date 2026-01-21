@@ -165,8 +165,81 @@ export default function ExecutiveTrainingPage() {
         </div>
       </Section>
 
-      {/* Why Do This First */}
+      {/* AI Leadership Essentials Curriculum */}
       <Section background="white">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-dark)] rounded-2xl p-8 md:p-12 text-white">
+            <div className="flex flex-col lg:flex-row lg:items-center gap-8">
+              <div className="flex-1">
+                <span className="inline-block text-sm font-medium bg-white/20 px-3 py-1 rounded-full mb-4">
+                  Executive Curriculum
+                </span>
+                <h2 className="text-white mb-4">AI Leadership Essentials</h2>
+                <p className="text-blue-100 mb-6">
+                  Our training is built on a comprehensive 7-module curriculum covering everything executives need to navigate AI adoption with confidence — from AI foundations through to measuring success.
+                </p>
+                <ul className="grid sm:grid-cols-2 gap-2 text-sm text-blue-100 mb-6">
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    AI Foundations
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Finding Opportunities
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Evaluating Tools
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Building the Business Case
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Leading Adoption
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Governance & Risk
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    Measuring Success
+                  </li>
+                </ul>
+                <Button href="/ai-leadership-essentials" variant="secondary" size="lg">
+                  Explore the Full Curriculum
+                </Button>
+              </div>
+              <div className="hidden lg:flex items-center justify-center">
+                <div className="w-48 h-48 rounded-full bg-white/10 flex items-center justify-center">
+                  <svg className="w-24 h-24 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Why Do This First */}
+      <Section background="light">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="mb-6">Why Do This First?</h2>
           <p className="text-lg text-[var(--color-text-secondary)]">

@@ -23,15 +23,25 @@ export function CtaBand({
   variant = 'primary',
 }: CtaBandProps) {
   const bgClass = variant === 'primary' ? 'bg-[var(--color-primary)]' : 'bg-[var(--color-bg-secondary)]';
-  const textClass = variant === 'primary' ? 'text-white' : 'text-[var(--color-text-primary)]';
-  const subtitleClass = variant === 'primary' ? 'text-blue-100' : 'text-[var(--color-text-secondary)]';
 
   return (
     <section className={`py-16 md:py-20 ${bgClass}`}>
       <Container>
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className={`mb-4 ${textClass}`}>{title}</h2>
-          {subtitle && <p className={`text-lg mb-8 ${subtitleClass}`}>{subtitle}</p>}
+          <h2
+            className="mb-4"
+            style={{ color: variant === 'primary' ? 'white' : 'var(--color-text-primary)' }}
+          >
+            {title}
+          </h2>
+          {subtitle && (
+            <p
+              className="text-lg mb-8"
+              style={{ color: variant === 'primary' ? 'rgba(219, 234, 254, 1)' : 'var(--color-text-secondary)' }}
+            >
+              {subtitle}
+            </p>
+          )}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               href={primaryCta.href}

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, useRef, useEffect } from 'react';
+import { useState, useCallback, useRef, useEffect, useMemo } from 'react';
 import {
   Chart as ChartJS,
   RadialLinearScale,
@@ -824,8 +824,8 @@ function QuestionCard({
   return (
     <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
       <div className="bg-slate-800 p-6">
-        <div className="text-sm text-white/70 mb-2">Question {questionNumber}</div>
-        <h3 className="text-xl font-semibold text-white">{question.question}</h3>
+        <div className="text-sm mb-2" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Question {questionNumber}</div>
+        <h3 className="text-xl font-semibold" style={{ color: '#ffffff' }}>{question.question}</h3>
       </div>
 
       <div className="p-6">
@@ -1381,7 +1381,7 @@ interface AIReadinessSurveyProps {
 }
 
 export function AIReadinessSurvey({ autoStart = false }: AIReadinessSurveyProps) {
-  const [stage, setStage] = useState<'welcome' | 'capture' | 'assessment' | 'results'>(autoStart ? 'capture' : 'welcome');
+  const [stage, setStage] = useState<'welcome' | 'capture' | 'assessment' | 'results'>('welcome');
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<(number | null)[]>(new Array(questions.length).fill(null));
   const [respondentData, setRespondentData] = useState<RespondentData>({
@@ -1392,6 +1392,13 @@ export function AIReadinessSurvey({ autoStart = false }: AIReadinessSurveyProps)
     industry: '',
   });
   const [isTransitioning, setIsTransitioning] = useState(false);
+
+  // Handle autoStart prop changes - skip to capture screen when autoStart becomes true
+  useEffect(() => {
+    if (autoStart && stage === 'welcome') {
+      setStage('capture');
+    }
+  }, [autoStart, stage]);
 
   const handleStart = useCallback(() => {
     setStage('capture');

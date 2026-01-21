@@ -74,8 +74,8 @@ export default function AboutPage() {
       <Hero
         title="Trusted AI Advisors for Australian SMEs"
         subtitle="Empowering Australian businesses with practical AI strategy, training, and guidance for real-world results."
-        primaryCta={{ text: 'Explore Our Services', href: '/services' }}
-        secondaryCta={{ text: 'Contact Our Team', href: '/contact' }}
+        primaryCta={{ text: 'Free AI Readiness Survey', href: '/ai-readiness-survey' }}
+        secondaryCta={{ text: 'Book a 30-Minute Call', href: '/contact' }}
       />
 
       {/* Who We Are */}
@@ -172,7 +172,8 @@ export default function AboutPage() {
 
       <CtaBand
         title="Want to see where AI fits in your business?"
-        primaryCta={{ text: 'Talk to an AI Guide', href: '/contact' }}
+        primaryCta={{ text: 'Free AI Readiness Survey', href: '/ai-readiness-survey' }}
+        secondaryCta={{ text: 'Book a 30-Minute Call', href: '/contact' }}
       />
     </>
   );

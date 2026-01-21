@@ -153,7 +153,8 @@ export default async function ResourcesPage({ searchParams }: PageProps) {
       <CtaBand
         title="Want these guides tailored to your business?"
         subtitle="Custom Workshops & AI Training for Your Team"
-        primaryCta={{ text: 'Talk to an AI Guide', href: '/contact' }}
+        primaryCta={{ text: 'Free AI Readiness Survey', href: '/ai-readiness-survey' }}
+        secondaryCta={{ text: 'Book a 30-Minute Call', href: '/contact' }}
         variant="primary"
       />
     </>

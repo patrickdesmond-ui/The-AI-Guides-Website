@@ -215,8 +215,8 @@ export default async function BlogPostPage({ params }: PageProps) {
       <CtaBand
         title="Need help implementing these ideas?"
         subtitle="Let's discuss how The AI Guides can support your AI journey."
-        primaryCta={{ text: 'Book a Session', href: '/contact' }}
-        secondaryCta={{ text: 'Explore Services', href: '/services' }}
+        primaryCta={{ text: 'Free AI Readiness Survey', href: '/ai-readiness-survey' }}
+        secondaryCta={{ text: 'Book a 30-Minute Call', href: '/contact' }}
       />
     </>
   );

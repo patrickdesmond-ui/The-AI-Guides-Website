@@ -60,8 +60,8 @@ export default function ExecutiveTrainingPage() {
       <Hero
         title="Training for AI-ready Teams"
         subtitle="Give your teams the clarity, guardrails, and skills to use AI in the business — not just talk about it."
-        primaryCta={{ text: 'Book a Session', href: '/contact' }}
-        secondaryCta={{ text: 'Talk to an AI Guide', href: '/contact' }}
+        primaryCta={{ text: 'Free AI Readiness Survey', href: '/ai-readiness-survey' }}
+        secondaryCta={{ text: 'Book a 30-Minute Call', href: '/contact' }}
       />
 
       {/* Intro Section */}
@@ -180,7 +180,8 @@ export default function ExecutiveTrainingPage() {
       <CtaBand
         title="Ready to upskill your leadership team?"
         subtitle="Empower your executives to lead confidently in an AI-driven landscape. Our tailored training sessions equip your team with practical strategies and actionable insights for successful AI adoption."
-        primaryCta={{ text: 'Book an Executive Session', href: '/contact' }}
+        primaryCta={{ text: 'Free AI Readiness Survey', href: '/ai-readiness-survey' }}
+        secondaryCta={{ text: 'Book a 30-Minute Call', href: '/contact' }}
       />
     </>
   );

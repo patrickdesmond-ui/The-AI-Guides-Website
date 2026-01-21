@@ -96,8 +96,8 @@ export default function ServicesPage() {
       <Hero
         title="AI Advisory Services for Australian SMEs"
         subtitle="Our services are built for Australian SMEs that want AI to show up in day-to-day operations — not just in a presentation. We start with strategy, enable your people through executive and team training, and support you to implement AI safely with clear governance."
-        primaryCta={{ text: 'Book a Session', href: '/contact' }}
-        secondaryCta={{ text: 'About The AI Guides', href: '/about' }}
+        primaryCta={{ text: 'Free AI Readiness Survey', href: '/ai-readiness-survey' }}
+        secondaryCta={{ text: 'Book a 30-Minute Call', href: '/contact' }}
       />
 
       {/* Services Section */}
@@ -195,8 +195,88 @@ export default function ServicesPage() {
         </div>
       </Section>
 
+      {/* How We Work - 90 Day Timeline */}
+      <Section background="white" id="how-we-work">
+        <SectionHeader
+          title="Our 90-Day Approach"
+          subtitle="We get practical AI tools deployed in your business within 90 days — not 6 months, not a year. Here's how we do it."
+        />
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-6">
+            {/* Week 1-2 */}
+            <div className="relative">
+              <div className="bg-[var(--color-primary)] text-white rounded-xl p-6">
+                <div className="text-sm font-medium opacity-80 mb-1">Weeks 1–2</div>
+                <h3 className="text-lg font-semibold mb-3">Align & Assess</h3>
+                <ul className="text-sm space-y-2 opacity-90">
+                  <li>• Executive alignment session</li>
+                  <li>• AI policy drafted</li>
+                  <li>• Tool shortlist approved</li>
+                </ul>
+              </div>
+              <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-[var(--color-border)]" />
+            </div>
+
+            {/* Week 3-4 */}
+            <div className="relative">
+              <div className="bg-[var(--color-bg-secondary)] rounded-xl p-6 border border-[var(--color-border)]">
+                <div className="text-sm font-medium text-[var(--color-primary)] mb-1">Weeks 3–4</div>
+                <h3 className="text-lg font-semibold text-[var(--color-text-primary)] mb-3">Plan & Prioritise</h3>
+                <ul className="text-sm space-y-2 text-[var(--color-text-secondary)]">
+                  <li>• Use-case prioritisation</li>
+                  <li>• 90-day roadmap created</li>
+                  <li>• Vendor evaluation</li>
+                </ul>
+              </div>
+              <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-[var(--color-border)]" />
+            </div>
+
+            {/* Week 5-8 */}
+            <div className="relative">
+              <div className="bg-[var(--color-bg-secondary)] rounded-xl p-6 border border-[var(--color-border)]">
+                <div className="text-sm font-medium text-[var(--color-primary)] mb-1">Weeks 5–8</div>
+                <h3 className="text-lg font-semibold text-[var(--color-text-primary)] mb-3">Build & Train</h3>
+                <ul className="text-sm space-y-2 text-[var(--color-text-secondary)]">
+                  <li>• 2–3 workflows shipped</li>
+                  <li>• Team training complete</li>
+                  <li>• Prompt packs deployed</li>
+                </ul>
+              </div>
+              <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-[var(--color-border)]" />
+            </div>
+
+            {/* Week 9-12 */}
+            <div>
+              <div className="bg-[var(--color-success)]/10 rounded-xl p-6 border border-[var(--color-success)]/30">
+                <div className="text-sm font-medium text-[var(--color-success)] mb-1">Weeks 9–12</div>
+                <h3 className="text-lg font-semibold text-[var(--color-text-primary)] mb-3">Embed & Sustain</h3>
+                <ul className="text-sm space-y-2 text-[var(--color-text-secondary)]">
+                  <li>• Governance cadence set</li>
+                  <li>• Metrics dashboard live</li>
+                  <li>• Handover complete</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 text-center">
+            <p className="text-[var(--color-text-secondary)] mb-6">
+              By day 90, your team has AI in use, guardrails in place, and metrics showing what&apos;s working.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button href="/ai-readiness-survey">
+                See Where You Stand
+              </Button>
+              <Button href="/contact" variant="outline">
+                Talk to Us About Your Timeline
+              </Button>
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* Why Section */}
-      <Section background="white">
+      <Section background="light">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="mb-6">Why Choose The AI Guides?</h2>
           <p className="text-lg text-[var(--color-text-secondary)] mb-6">
@@ -215,8 +295,8 @@ export default function ServicesPage() {
       <CtaBand
         title="Ready to Get Started?"
         subtitle="Let's discuss how we can help your business navigate AI adoption with confidence."
-        primaryCta={{ text: 'Get in Touch', href: '/contact' }}
-        secondaryCta={{ text: 'Take the AI Readiness Survey', href: '/ai-readiness-survey' }}
+        primaryCta={{ text: 'Free AI Readiness Survey', href: '/ai-readiness-survey' }}
+        secondaryCta={{ text: 'Book a 30-Minute Call', href: '/contact' }}
       />
     </>
   );

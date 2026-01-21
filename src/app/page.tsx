@@ -11,10 +11,10 @@ export default function HomePage() {
   return (
     <>
       <Hero
-        title="Navigate AI Change with Confidence"
-        subtitle="Expert guidance, strategy, and training to help your organisation adopt AI with confidence and drive measurable results."
-        primaryCta={{ text: 'Explore Our Services', href: '/services' }}
-        secondaryCta={{ text: 'Executive AI Training', href: '/executive-training' }}
+        title="Make AI Practical in Your Business"
+        subtitle="Strategy, governance and training for Australian SMEs — standardise 2-3 AI-enabled workflows safely in 90 days."
+        primaryCta={{ text: 'Free AI Readiness Survey', href: '/ai-readiness-survey' }}
+        secondaryCta={{ text: 'Book a 30-Minute Call', href: '/contact' }}
       />
 
       <ServicesOverview />
@@ -28,7 +28,8 @@ export default function HomePage() {
       <CtaBand
         title="Discover Your AI Potential"
         subtitle="Take the First Step Towards Smarter Business"
-        primaryCta={{ text: 'Take the AI Readiness Survey', href: '/ai-readiness-survey' }}
+        primaryCta={{ text: 'Free AI Readiness Survey', href: '/ai-readiness-survey' }}
+        secondaryCta={{ text: 'Book a 30-Minute Call', href: '/contact' }}
       />
     </>
   );

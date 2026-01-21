@@ -195,18 +195,22 @@ export default function ServicesPage() {
         </div>
       </Section>
 
-      {/* How We Work - 90 Day Timeline */}
+      {/* How We Work */}
       <Section background="white" id="how-we-work">
         <SectionHeader
-          title="Our 90-Day Approach"
-          subtitle="We get practical AI tools deployed in your business within 90 days — not 6 months, not a year. Here's how we do it."
+          title="How We Work"
+          subtitle="We collaborate closely with your team to get AI embedded in your business — with governance, training, and measurable results."
         />
         <div className="max-w-5xl mx-auto">
+          {/* Timeline header */}
+          <p className="text-center text-sm text-[var(--color-text-muted)] mb-6">
+            Sample timeline in our 90-day approach
+          </p>
+
           <div className="grid md:grid-cols-4 gap-6">
-            {/* Week 1-2 */}
+            {/* Stage 1 */}
             <div className="relative">
               <div className="bg-[var(--color-primary)] text-white rounded-xl p-6">
-                <div className="text-sm font-medium opacity-80 mb-1">Weeks 1–2</div>
                 <h3 className="text-lg font-semibold mb-3">Align & Assess</h3>
                 <ul className="text-sm space-y-2 opacity-90">
                   <li>• Executive alignment session</li>
@@ -214,13 +218,13 @@ export default function ServicesPage() {
                   <li>• Tool shortlist approved</li>
                 </ul>
               </div>
-              <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-[var(--color-border)]" />
+              <p className="text-xs text-[var(--color-text-muted)] text-center mt-2">Weeks 1–2</p>
+              <div className="hidden md:block absolute top-1/3 -right-3 w-6 h-0.5 bg-[var(--color-border)]" />
             </div>
 
-            {/* Week 3-4 */}
+            {/* Stage 2 */}
             <div className="relative">
               <div className="bg-[var(--color-bg-secondary)] rounded-xl p-6 border border-[var(--color-border)]">
-                <div className="text-sm font-medium text-[var(--color-primary)] mb-1">Weeks 3–4</div>
                 <h3 className="text-lg font-semibold text-[var(--color-text-primary)] mb-3">Plan & Prioritise</h3>
                 <ul className="text-sm space-y-2 text-[var(--color-text-secondary)]">
                   <li>• Use-case prioritisation</li>
@@ -228,13 +232,13 @@ export default function ServicesPage() {
                   <li>• Vendor evaluation</li>
                 </ul>
               </div>
-              <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-[var(--color-border)]" />
+              <p className="text-xs text-[var(--color-text-muted)] text-center mt-2">Weeks 3–4</p>
+              <div className="hidden md:block absolute top-1/3 -right-3 w-6 h-0.5 bg-[var(--color-border)]" />
             </div>
 
-            {/* Week 5-8 */}
+            {/* Stage 3 */}
             <div className="relative">
               <div className="bg-[var(--color-bg-secondary)] rounded-xl p-6 border border-[var(--color-border)]">
-                <div className="text-sm font-medium text-[var(--color-primary)] mb-1">Weeks 5–8</div>
                 <h3 className="text-lg font-semibold text-[var(--color-text-primary)] mb-3">Build & Train</h3>
                 <ul className="text-sm space-y-2 text-[var(--color-text-secondary)]">
                   <li>• 2–3 workflows shipped</li>
@@ -242,13 +246,13 @@ export default function ServicesPage() {
                   <li>• Prompt packs deployed</li>
                 </ul>
               </div>
-              <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-[var(--color-border)]" />
+              <p className="text-xs text-[var(--color-text-muted)] text-center mt-2">Weeks 5–8</p>
+              <div className="hidden md:block absolute top-1/3 -right-3 w-6 h-0.5 bg-[var(--color-border)]" />
             </div>
 
-            {/* Week 9-12 */}
+            {/* Stage 4 */}
             <div>
               <div className="bg-[var(--color-success)]/10 rounded-xl p-6 border border-[var(--color-success)]/30">
-                <div className="text-sm font-medium text-[var(--color-success)] mb-1">Weeks 9–12</div>
                 <h3 className="text-lg font-semibold text-[var(--color-text-primary)] mb-3">Embed & Sustain</h3>
                 <ul className="text-sm space-y-2 text-[var(--color-text-secondary)]">
                   <li>• Governance cadence set</li>
@@ -256,6 +260,7 @@ export default function ServicesPage() {
                   <li>• Handover complete</li>
                 </ul>
               </div>
+              <p className="text-xs text-[var(--color-text-muted)] text-center mt-2">Weeks 9–12</p>
             </div>
           </div>
 

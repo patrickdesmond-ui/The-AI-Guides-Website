@@ -12,7 +12,7 @@ export default function HomePage() {
     <>
       <Hero
         title="Make AI Practical in Your Business"
-        subtitle="Strategy, governance and training for Australian SMEs — standardise 2-3 AI-enabled workflows safely in 90 days."
+        subtitle="Strategy, training and governance for Australian SMEs — standardise AI-enabled workflows safely today."
         primaryCta={{ text: 'Free AI Readiness Survey', href: '/ai-readiness-survey' }}
         secondaryCta={{ text: 'Book a 30-Minute Call', href: '/contact' }}
       />

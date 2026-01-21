@@ -37,8 +37,8 @@ export function Process() {
   return (
     <Section background="light" id="how-we-work">
       <SectionHeader
-        title="AI in Your Business in 90 Days"
-        subtitle="Not 6 months. Not a year. We help Australian SMEs get practical AI tools deployed — with governance, training, and measurable results — in just 90 days."
+        title="How We Work"
+        subtitle="We collaborate to get AI in your business in 90 days."
       />
 
       <div className="max-w-4xl mx-auto">

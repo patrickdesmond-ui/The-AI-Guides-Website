@@ -31,40 +31,40 @@ const howWeWork = [
     title: 'Assess',
     description:
       'We evaluate your current capabilities, readiness, and business needs to identify AI opportunities that truly matter.',
-    href: '/services',
-    linkText: 'Learn More',
+    href: '/ai-readiness-survey',
+    linkText: 'Take the Survey',
   },
   {
     step: 2,
     title: 'Prioritise',
     description:
       'We help you focus on the most valuable and achievable AI projects, aligning actions to your strategic goals.',
-    href: '/services',
-    linkText: 'See Our Process',
+    href: '/ai-strategy-essentials-for-smes',
+    linkText: 'Read the Guide',
   },
   {
     step: 3,
     title: 'Implement',
     description:
       'We guide you through practical implementation, ensuring solutions are delivered efficiently and with minimal disruption.',
-    href: '/contact',
-    linkText: 'Start Your Project',
+    href: '/ai-implementation-guide',
+    linkText: 'Read the Guide',
   },
   {
     step: 4,
     title: 'Upskill',
     description:
       "We provide expert-led training to build your team's AI literacy and confidence, empowering lasting capability.",
-    href: '/executive-training',
-    linkText: 'Explore Training',
+    href: '/sme-ai-upskilling-playbook-2025',
+    linkText: 'Read the Playbook',
   },
   {
     step: 5,
     title: 'Govern',
     description:
       'We help you establish robust AI governance practices, ensuring ongoing compliance, ethics, and risk management.',
-    href: '/resources',
-    linkText: 'Discover Governance',
+    href: '/executive-guide-to-ai-governance-sme-edition',
+    linkText: 'Read the Guide',
   },
 ];
 

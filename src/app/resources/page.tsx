@@ -31,7 +31,7 @@ const featuredResources = [
     title: 'AI Implementation Guide',
     description:
       'Step-by-step guidance to help SMEs plan, pilot, and scale AI solutions efficiently and effectively.',
-    href: '/executive-training',
+    href: '/ai-implementation-guide',
   },
   {
     title: 'AI Governance Best Practices',

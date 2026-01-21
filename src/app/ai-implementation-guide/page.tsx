@@ -37,52 +37,56 @@ const landscapeStats = [
   },
 ];
 
-// Assessment dimensions
+// Assessment dimensions - aligned with AI Readiness Checklist
 const assessmentDimensions = [
   {
-    id: 'data-maturity',
-    title: 'Data Maturity',
+    id: 'strategy',
+    title: '1. Strategy & Ambition',
     items: [
-      'Do you have structured data in key operational areas (sales, customers, inventory, finances)?',
-      'Is your data accurate, consistent, and accessible?',
-      'Do you have processes for data quality management?',
-      'Can data be exported or accessed programmatically?',
+      'Leadership is aligned on why AI matters and which business goals it supports.',
+      "We've identified 2–3 priority AI use-cases to start with.",
+      'A named sponsor (CEO/GM/COO) is accountable for AI direction.',
+      "We've defined success metrics for our first AI initiatives (e.g., time saved, NPS, error reduction).",
     ],
   },
   {
-    id: 'process-documentation',
-    title: 'Process Documentation',
+    id: 'people',
+    title: '2. People & Capability',
     items: [
-      'Are your core business processes documented and standardised?',
-      'Can you identify bottlenecks, repetitive tasks, and decision points?',
-      'Do you know where staff spend most of their time on routine work?',
+      'Executives and managers understand AI basics and our approach.',
+      'Staff know which approved AI tools they can use for work.',
+      "We've delivered at least one structured training session (not just ad-hoc experimenting).",
+      'Someone owns AI capability (ops/strategy/L&D) and answers day-to-day questions.',
     ],
   },
   {
-    id: 'technology-foundation',
-    title: 'Technology Foundation',
+    id: 'processes',
+    title: '3. Processes & Ways of Working',
     items: [
-      'Are you using modern cloud-based tools (Microsoft 365, Google Workspace, etc.)?',
-      'Do your systems integrate with each other?',
-      'Do you have IT support (internal or external) that can assist with implementation?',
+      "We've identified workflows where AI could save time (service, finance, ops).",
+      'We have a process for testing and approving new AI workflows.',
+      'Teams have bandwidth to adopt a new, AI-enabled way of working.',
+      "We've chosen at least one function to pilot first (services, finance, ops).",
     ],
   },
   {
-    id: 'team-capabilities',
-    title: 'Team Capabilities',
+    id: 'data',
+    title: '4. Data & Tools',
     items: [
-      'Do you have staff who are curious about AI and willing to experiment?',
-      "What's the general comfort level with new technology across teams?",
-      'Is leadership willing to champion AI initiatives and allocate time for learning?',
+      'We have an approved AI tools list (e.g., Copilot, Gemini, ChatGPT Plus).',
+      'Business documents and data are organized enough for AI tools to use.',
+      "We've defined what data must not be pasted into public AI tools (red/amber/green or R/A/G rules).",
+      'Core platforms (Microsoft/Google/CRM) are up to date to support AI features.',
     ],
   },
   {
-    id: 'risk-appetite',
-    title: 'Risk Appetite',
+    id: 'governance',
+    title: '5. Governance & Risk',
     items: [
-      'How does your organisation handle experimentation and failure?',
-      "What's your tolerance for iterating on solutions that don't work perfectly the first time?",
-      'Are there regulatory or compliance considerations in your industry?',
+      "We have a one-page AI policy that's published and easy to find.",
+      'Human review is required for material outputs (customer comms, board papers, finance content).',
+      'We track AI usage via approved tools or a simple log.',
+      'We review tools/policy quarterly and share examples of good AI use.',
     ],
   },
 ];
@@ -193,10 +197,12 @@ const implementationPitfalls = [
 // Helper Components
 function StatCallout({ stat, label, source }: { stat: string; label: string; source: string }) {
   return (
-    <div className="bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-dark)] rounded-xl p-6 text-white">
-      <div className="text-4xl md:text-5xl font-bold mb-2">{stat}</div>
-      <div className="text-sm md:text-base opacity-90 mb-3">{label}</div>
-      <div className="text-xs opacity-70 border-t border-white/20 pt-3 mt-3">
+    <div className="bg-[var(--color-bg-secondary)] border border-[var(--color-border)] rounded-xl p-5">
+      <div className="flex items-baseline gap-2 mb-2">
+        <span className="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">{stat}</span>
+        <span className="text-sm text-[var(--color-text-secondary)]">{label}</span>
+      </div>
+      <div className="text-xs text-[var(--color-text-muted)] pt-2 border-t border-[var(--color-border)]">
         <span className="font-medium">Source:</span> {source}
       </div>
     </div>
@@ -220,14 +226,21 @@ function CaseStudyCard({
   description,
   details,
   source,
+  showHeader = true,
 }: {
   company: string;
   description: string;
   details: string;
   source: string;
+  showHeader?: boolean;
 }) {
   return (
     <div className="bg-blue-50 border-l-4 border-[var(--color-primary)] rounded-r-xl p-5">
+      {showHeader && (
+        <div className="text-xs font-medium text-[var(--color-primary)] uppercase tracking-wide mb-2">
+          Real SME Example
+        </div>
+      )}
       <div className="font-semibold text-[var(--color-text-primary)] mb-2">{company}</div>
       <div className="text-sm text-[var(--color-text-muted)] mb-2">{description}</div>
       <div className="text-sm text-[var(--color-text-secondary)] mb-3">{details}</div>
@@ -363,39 +376,51 @@ function InteractiveChecklist({
 function ValueFeasibilityMatrix() {
   return (
     <div className="bg-white border border-[var(--color-border)] rounded-xl p-6">
-      <div className="grid grid-cols-2 gap-4 relative">
+      <div className="flex gap-4">
         {/* Y-axis label */}
-        <div className="absolute -left-4 top-1/2 -translate-y-1/2 -rotate-90 text-xs text-[var(--color-text-muted)] font-medium whitespace-nowrap">
-          VALUE →
+        <div className="flex items-center justify-center w-6 flex-shrink-0">
+          <div className="-rotate-90 text-xs text-[var(--color-text-muted)] font-medium whitespace-nowrap flex items-center gap-1">
+            <span>VALUE</span>
+            <svg className="w-3 h-3 rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            </svg>
+          </div>
         </div>
 
-        {/* Top row */}
-        <div className="bg-green-50 border-2 border-green-200 rounded-lg p-4">
-          <div className="font-semibold text-green-800 mb-1">Quick Wins</div>
-          <div className="text-xs text-green-700 mb-2">High value, high feasibility</div>
-          <div className="text-xs text-green-600 font-medium">→ Start here</div>
-        </div>
-        <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
-          <div className="font-semibold text-blue-800 mb-1">Strategic Bets</div>
-          <div className="text-xs text-blue-700 mb-2">High value, lower feasibility</div>
-          <div className="text-xs text-blue-600 font-medium">→ Plan carefully</div>
-        </div>
+        <div className="flex-1">
+          <div className="grid grid-cols-2 gap-3">
+            {/* Top row - High Value */}
+            <div className="bg-green-50 border-2 border-green-200 rounded-lg p-4">
+              <div className="font-semibold text-green-800 mb-1">Quick Wins</div>
+              <div className="text-xs text-green-700 mb-2">High value, high feasibility</div>
+              <div className="text-xs text-green-600 font-medium">→ Start here</div>
+            </div>
+            <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
+              <div className="font-semibold text-blue-800 mb-1">Strategic Bets</div>
+              <div className="text-xs text-blue-700 mb-2">High value, lower feasibility</div>
+              <div className="text-xs text-blue-600 font-medium">→ Plan carefully</div>
+            </div>
 
-        {/* Bottom row */}
-        <div className="bg-gray-50 border-2 border-gray-200 rounded-lg p-4">
-          <div className="font-semibold text-gray-700 mb-1">Low Priority</div>
-          <div className="text-xs text-gray-600 mb-2">Lower value, high feasibility</div>
-          <div className="text-xs text-gray-500 font-medium">→ Maybe automate</div>
-        </div>
-        <div className="bg-amber-50 border-2 border-amber-200 rounded-lg p-4">
-          <div className="font-semibold text-amber-800 mb-1">Consider Later</div>
-          <div className="text-xs text-amber-700 mb-2">Lower value, lower feasibility</div>
-          <div className="text-xs text-amber-600 font-medium">→ Deprioritise</div>
-        </div>
+            {/* Bottom row - Low Value */}
+            <div className="bg-gray-50 border-2 border-gray-200 rounded-lg p-4">
+              <div className="font-semibold text-gray-700 mb-1">Low Priority</div>
+              <div className="text-xs text-gray-600 mb-2">Lower value, high feasibility</div>
+              <div className="text-xs text-gray-500 font-medium">→ Maybe automate</div>
+            </div>
+            <div className="bg-amber-50 border-2 border-amber-200 rounded-lg p-4">
+              <div className="font-semibold text-amber-800 mb-1">Consider Later</div>
+              <div className="text-xs text-amber-700 mb-2">Lower value, lower feasibility</div>
+              <div className="text-xs text-amber-600 font-medium">→ Deprioritise</div>
+            </div>
+          </div>
 
-        {/* X-axis label */}
-        <div className="col-span-2 text-center text-xs text-[var(--color-text-muted)] font-medium mt-2">
-          FEASIBILITY →
+          {/* X-axis label */}
+          <div className="text-center text-xs text-[var(--color-text-muted)] font-medium mt-3 flex items-center justify-center gap-1">
+            <span>FEASIBILITY</span>
+            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
         </div>
       </div>
     </div>
@@ -594,8 +619,11 @@ export default function AIImplementationGuidePage() {
           </div>
 
           <div className="text-center mt-8">
+            <p className="text-sm text-[var(--color-text-muted)] mb-3">
+              Want to know where you stand? Get a personalised score and recommendations in 5 minutes.
+            </p>
             <Button href="/ai-readiness-survey" size="lg">
-              Take Our Free AI Readiness Assessment
+              Take the Free AI Readiness Survey
             </Button>
           </div>
         </div>
@@ -604,20 +632,34 @@ export default function AIImplementationGuidePage() {
       {/* Sticky Navigation */}
       <nav className="sticky top-0 z-40 bg-white border-b border-[var(--color-border)] shadow-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex gap-1 overflow-x-auto py-3 scrollbar-hide">
-            {sections.map((section) => (
-              <button
-                key={section.id}
-                onClick={() => scrollToSection(section.id)}
-                className={`flex-shrink-0 px-4 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap ${
-                  activeSection === section.id
-                    ? 'bg-[var(--color-primary)] text-white'
-                    : 'text-[var(--color-text-secondary)] hover:bg-[var(--color-bg-secondary)]'
-                }`}
-              >
-                {section.title}
-              </button>
-            ))}
+          <div className="flex items-center gap-4 py-3">
+            <div className="hidden sm:flex items-center gap-2 text-sm text-[var(--color-text-muted)] flex-shrink-0">
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              <span className="font-medium">Jump to:</span>
+            </div>
+            <div className="flex items-center gap-1 overflow-x-auto scrollbar-hide flex-1">
+              <svg className="w-4 h-4 text-[var(--color-text-muted)] flex-shrink-0 sm:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+              {sections.map((section) => (
+                <button
+                  key={section.id}
+                  onClick={() => scrollToSection(section.id)}
+                  className={`flex-shrink-0 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors whitespace-nowrap ${
+                    activeSection === section.id
+                      ? 'bg-[var(--color-primary)] text-white'
+                      : 'text-[var(--color-text-secondary)] hover:bg-[var(--color-bg-secondary)]'
+                  }`}
+                >
+                  {section.title}
+                </button>
+              ))}
+              <svg className="w-4 h-4 text-[var(--color-text-muted)] flex-shrink-0 sm:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
           </div>
         </div>
       </nav>
@@ -781,12 +823,6 @@ export default function AIImplementationGuidePage() {
                 source="Fifth Quadrant / NAIC partnership research"
               />
             </div>
-
-            <div className="mt-6 text-center">
-              <Button href="/ai-readiness-survey" size="lg">
-                Take Our AI Readiness Survey — Get Your Score in 5 Minutes
-              </Button>
-            </div>
           </Accordion>
 
           {/* Action Block 2 */}
@@ -946,12 +982,6 @@ export default function AIImplementationGuidePage() {
                 details='Grain grading was time-consuming and labour-intensive. They worked with the Australian Institute for Machine Learning to develop a working AI prototype in just 6-8 weeks. They started narrow (small red lentils) before expanding to other crops. Falkiner&apos;s advice: "Look at what your problem is, and ask if AI is the solution. Don&apos;t look at AI for the sake of having AI. It has to be the right fit for your business."'
                 source="AIML Case Studies / AAP"
               />
-            </div>
-
-            <div className="mt-6 text-center">
-              <Button href="/contact" variant="outline" size="lg">
-                Book a Use Case Workshop — We&apos;ll Help You Prioritise
-              </Button>
             </div>
           </Accordion>
         </div>
@@ -1218,13 +1248,8 @@ export default function AIImplementationGuidePage() {
               description="According to the Responsible AI Index"
               details='SMEs in the leading category of responsible AI practices are more likely to have business leaders driving AI strategy. These organisations show "greater appreciation of the competitive benefits that responsible AI practices offer, including reputation, innovation, operational efficiency and talent acquisition." The ones that stall tend to approach AI as a one-time experiment rather than an evolving capability.'
               source="Fifth Quadrant / NAIC Responsible AI Index 2024"
+              showHeader={false}
             />
-
-            <div className="mt-6 text-center">
-              <Button href="/executive-guide-to-ai-governance-sme-edition" variant="outline" size="lg">
-                Explore Our AI Governance Guide
-              </Button>
-            </div>
           </Accordion>
         </div>
       </Section>
@@ -1457,16 +1482,15 @@ export default function AIImplementationGuidePage() {
 
       {/* Final CTA */}
       <section className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primary-dark)] py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <h2 className="text-white mb-4">Ready to Start Your AI Implementation?</h2>
-          <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
-            You don&apos;t need to figure this out alone. Whether you&apos;re looking for a
-            readiness assessment, help prioritising use cases, or end-to-end implementation
-            support—we can help.
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 style={{ color: 'white' }} className="mb-4">Have Questions? We&apos;re Here to Help.</h2>
+          <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+            Whether you&apos;re still assessing your readiness or ready to start a pilot, we&apos;re
+            happy to answer questions and point you in the right direction—no obligations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="/ai-readiness-survey" variant="secondary" size="lg">
-              Take the Free AI Readiness Survey
+              Start with the Free AI Readiness Survey
             </Button>
             <Button
               href="/contact"
@@ -1474,7 +1498,7 @@ export default function AIImplementationGuidePage() {
               size="lg"
               className="border-white text-white hover:bg-white/10"
             >
-              Book a 30-Minute Consultation
+              Book a 30-Minute Call
             </Button>
           </div>
         </div>

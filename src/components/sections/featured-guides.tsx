@@ -4,16 +4,16 @@ import { Card, CardTitle, CardDescription } from '@/components/ui/card';
 
 const featuredGuides = [
   {
+    title: 'AI Implementation Guide',
+    description:
+      'Step-by-step guidance to help SMEs plan, pilot, and scale AI solutions efficiently and effectively.',
+    href: '/ai-implementation-guide',
+  },
+  {
     title: 'Executive Guide to AI Governance (SME Edition)',
     description:
       'A comprehensive guide tailored for SME leaders to establish effective AI governance frameworks and manage risk.',
     href: '/executive-guide-to-ai-governance-sme-edition',
-  },
-  {
-    title: '10 Quick Wins with GenAI in Services, Finance and Ops',
-    description:
-      'Discover ten actionable GenAI use cases that deliver immediate value across core business functions.',
-    href: '/10-quick-wins-genai-services-finance-ops',
   },
   {
     title: 'SME AI Upskilling Playbook (2025)',

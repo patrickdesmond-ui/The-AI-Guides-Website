@@ -177,28 +177,6 @@ export default function ExecutiveTrainingPage() {
         </div>
       </Section>
 
-      {/* AI Leadership Essentials */}
-      <Section background="dark">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-[var(--color-primary)] rounded-2xl p-8 md:p-12">
-            <div className="text-center">
-              <h2 className="text-white mb-4">AI Leadership Essentials</h2>
-              <p className="text-2xl md:text-3xl font-bold text-white mb-6">
-                From $39,500 AUD (ex-GST)
-              </p>
-              <p className="text-lg text-white/90 max-w-2xl mx-auto mb-8">
-                Our training is built on a comprehensive 7-module curriculum covering everything
-                executives need to navigate AI adoption with confidence — from AI foundations
-                through to measuring success.
-              </p>
-              <Button href="/contact" variant="secondary" className="bg-white text-[var(--color-primary)] hover:bg-white/90">
-                Get Started
-              </Button>
-            </div>
-          </div>
-        </div>
-      </Section>
-
       <CtaBand
         title="Ready to upskill your leadership team?"
         subtitle="Empower your executives to lead confidently in an AI-driven landscape. Our tailored training sessions equip your team with practical strategies and actionable insights for successful AI adoption."

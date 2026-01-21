@@ -47,8 +47,8 @@ const howWeWork = [
     title: 'Implement',
     description:
       'We guide you through practical implementation, ensuring solutions are delivered efficiently and with minimal disruption.',
-    href: '/10-quick-wins-genai-services-finance-ops',
-    linkText: 'Get Quick Wins',
+    href: '/ai-implementation-guide',
+    linkText: 'Read the Guide',
   },
   {
     step: 4,
